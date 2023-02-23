@@ -212,6 +212,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dlte full stack development" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="240" y="0" key="#Deployment" timestamp="1677155082443">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="240" y="0" key="#Deployment/0.0.1280.672@0.0.1280.672" timestamp="1677155082443" />
     <state x="446" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1677150933713">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
@@ -224,10 +228,10 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="404" y="243" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.672@0.0.1280.672" timestamp="1676969471689" />
-    <state x="249" y="0" width="796" height="463" key="CommitChangelistDialog2" timestamp="1677154659416">
+    <state x="249" y="0" width="796" height="463" key="CommitChangelistDialog2" timestamp="1677155097276">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="249" y="0" width="796" height="463" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1677154659416" />
+    <state x="249" y="0" width="796" height="463" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1677155097276" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1677078084338">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
@@ -268,10 +272,10 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.672@0.0.1280.672" timestamp="1677154503295" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1677154675456">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1677155155969">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.672@0.0.1280.672" timestamp="1677154675456" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.672@0.0.1280.672" timestamp="1677155155969" />
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1677154341310">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
