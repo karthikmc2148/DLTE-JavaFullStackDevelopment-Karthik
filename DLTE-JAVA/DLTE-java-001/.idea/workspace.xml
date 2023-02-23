@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49954cf5-9d38-4d85-adbd-fc956ddd48ea" name="Default Changelist" comment="" />
+    <list default="true" id="49954cf5-9d38-4d85-adbd-fc956ddd48ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/assignment/SmsBanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assignment/SmsBanking.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +62,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Application.ChargeOnMinBalance">
     <configuration name="CalculateFD" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -162,7 +166,8 @@
       <workItem from="1677041011245" duration="133000" />
       <workItem from="1677077528871" duration="553000" />
       <workItem from="1677087732580" duration="6669000" />
-      <workItem from="1677135526474" duration="5784000" />
+      <workItem from="1677135526474" duration="6433000" />
+      <workItem from="1677154339835" duration="253000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1677077720342</created>
@@ -192,6 +197,9 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="new" />
     <MESSAGE value="Personal Loan Calculator" />
     <MESSAGE value="Dlte full stack development" />
@@ -210,10 +218,10 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="404" y="243" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.672@0.0.1280.672" timestamp="1676969471689" />
-    <state x="249" y="0" width="796" height="463" key="CommitChangelistDialog2" timestamp="1677153236410">
+    <state x="249" y="0" width="796" height="463" key="CommitChangelistDialog2" timestamp="1677154616471">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="249" y="0" width="796" height="463" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1677153236410" />
+    <state x="249" y="0" width="796" height="463" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1677154616471" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1677078084338">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
@@ -250,18 +258,18 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state width="618" height="201" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1677089788198" />
-    <state x="144" y="0" key="SettingsEditor" timestamp="1677077548972">
+    <state x="144" y="0" key="SettingsEditor" timestamp="1677154503295">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="144" y="0" key="SettingsEditor/0.0.1280.672@0.0.1280.672" timestamp="1677077548972" />
+    <state x="144" y="0" key="SettingsEditor/0.0.1280.672@0.0.1280.672" timestamp="1677154503295" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1677153281297">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.672@0.0.1280.672" timestamp="1677153281297" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1677135533029">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1677154341310">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1677135533029" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1677154341310" />
     <state x="103" y="12" key="new project wizard" timestamp="1677041142108">
       <screen x="0" y="0" width="1280" height="672" />
     </state>

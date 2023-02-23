@@ -71,8 +71,11 @@ class Transation extends Kyc{
     }
 
     public void recharge(){
-        System.out.println("Enter the Phone Number:");
+        System.out.println(" this recharge method");
 
 
     }
+}
+class banking{
+
 }
