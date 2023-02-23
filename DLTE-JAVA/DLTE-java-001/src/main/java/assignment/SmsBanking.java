@@ -71,7 +71,7 @@ class Transation extends Kyc{
     }
 
     public void recharge(){
-        System.out.println(" this recharge method");
+        System.out.println(" this ");
 
 
     }

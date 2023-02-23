@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49954cf5-9d38-4d85-adbd-fc956ddd48ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/assignment/SmsBanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/assignment/SmsBanking.java" afterDir="false" />
     </list>
@@ -167,7 +166,7 @@
       <workItem from="1677077528871" duration="553000" />
       <workItem from="1677087732580" duration="6669000" />
       <workItem from="1677135526474" duration="6433000" />
-      <workItem from="1677154339835" duration="253000" />
+      <workItem from="1677154339835" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1677077720342</created>
@@ -190,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677153237419</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Dlte full stack development">
+      <created>1677154660616</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677154660616</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
