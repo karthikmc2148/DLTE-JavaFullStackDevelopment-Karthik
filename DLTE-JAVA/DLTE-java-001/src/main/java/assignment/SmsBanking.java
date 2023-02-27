@@ -6,10 +6,11 @@ import lombok.NoArgsConstructor;
 
 import java.util.Scanner;
 import java.util.SortedMap;
-
+//this enables the automatic implication of getters , setters & toString method
 @Data
 
 
+//main class where all the methods are called using the single object
 public class SmsBanking {
     public static void main(String[] args) {
     Sms sms = new Sms();
@@ -20,16 +21,16 @@ public class SmsBanking {
     }
 }
 
-
+@Data
 class Kyc{
     private Long accNum;
     private String name;
     private Double balance=5000.0;
     private Integer upi= 1234;
 
-    public Long getAccNum() {
+   public Long getAccNum() {
         return accNum;
-    }
+   }
 
     public void setAccNum(Long accNum) {
         this.accNum = accNum;
@@ -43,7 +44,7 @@ class Kyc{
         this.name = name;
     }
 
-    public Double getBalance() {
+  public Double getBalance() {
         return balance;
     }
 
@@ -59,9 +60,10 @@ class Kyc{
         this.upi = upi;
     }
 }
+//Inherits the properties of Kyc class
 class Transaction extends Kyc {
     Scanner scanner = new Scanner(System.in);
-
+//to enquire the balance in your account
     public void balanceEnqiry() {
         System.out.println("Enter the account Holder name, account Number  :");
         String name = scanner.nextLine();
@@ -75,7 +77,7 @@ class Transaction extends Kyc {
         else
             System.out.println("Wrong UPI Entered!!");
     }
-
+     //method to recharge your Phone Number
     public void recharge() {
         System.out.println("Enter the Phone Number and amount to be recharged:");
         Long phoneNo = scanner.nextLong();
@@ -94,7 +96,7 @@ class Transaction extends Kyc {
         }
         else System.out.println("wrong UPI ID entered!!");
     }
-
+     //method to book your tickets
     public void bookTickets(){
         System.out.println("Enter the Number of tickets:");
                 Integer tickets= scanner.nextInt();
@@ -112,8 +114,9 @@ class Transaction extends Kyc {
        else System.out.println("wrong UPI ID entered!!");
     }
 }
+//Sms class Inherits the properties of Transaction class
 class Sms extends Transaction{
-
+   //method that provides services : balance enquiry,recharge
     public void services() {
         System.out.println("Enter 1901- for Balance Enqiry \n 2245- for Recharge");
         Integer input =scanner.nextInt();
