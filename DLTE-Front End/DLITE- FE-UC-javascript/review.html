@@ -12,12 +12,13 @@
 
 </head>
 <body>
+    <!--create a container-->
     <div class="container">
         <div class="row justify-content-center">
               
            <h1 class="rounded-4 text-center text-dark bg-primary mt-3 ">Fund Transfer</h1>
-            
-            <form  name="send" class="col-lg-6 col-md-8 col-sm-12 text-danger rounded-5 p-5 bg-info mt-4">
+             <!--form to fill the details-->
+             <form  name="send" class="col-lg-6 col-md-8 col-sm-12 text-danger rounded-5 p-5 bg-info mt-4">
                 <div class="form group ">
                     <label>Sender Name</label>
                     <input type="text" name="senderName" placeholder="Sender Name" class="form-control" />
@@ -37,14 +38,17 @@
                     <input type="button" value="Deposit" class="col-2 btn btn-success" onclick="deposit()"/>
                     <input type="reset" value="reset" class="col-2 btn btn-primary" />
                 </div>
+                <!--output is seen in the card-->
                 <div class="card mt-5 text-danger bg-light">
                     <output name="result" >The Transation  Details will appear here!!</output>
                 </div>
                
              </form>
+           
         </div>
     </div>
 
 
 </body>
+
 </html>

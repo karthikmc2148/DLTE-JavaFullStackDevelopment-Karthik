@@ -6,8 +6,9 @@ const reciver=document.forms['send'].reciverName.value
 var cash=document.forms['send'].amount.value
 
 if(cash<=accBalance){
-    accBalance-= cash
     alert(sender+ " will Transfer an amount of ₹ "+cash+ " confirm by clicking on OK")
+    accBalance-= cash
+   
     document.forms['send'].result.value = sender+ " has Transfered an amount of ₹ "+cash+" to "+reciver+ ", available Balance is ₹ "+accBalance
 }
     else
@@ -22,6 +23,6 @@ function deposit(){
    var cash=document.forms['send'].amount.value
   accBalance+= +cash
  
-    document.forms['send'].result.value = sender+ " has Deposited an amount of ₹ "+cash+" to "+reciver+" available Balance  is ₹ "+accBalance
+    document.forms['send'].result.value = reciver+ " has Deposited an amount of ₹ "+cash+" to "+sender+" available Balance  is ₹ "+accBalance
 
 }
