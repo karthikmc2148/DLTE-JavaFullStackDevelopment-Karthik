@@ -3,7 +3,7 @@ create table bills(bill_id int not null, card_number int not null, bill_amount i
 alter table bills add constraint bill_id_seq primary key(bill_id);
 create sequence bill_id_seq  start with 1964722 increment by 1;
 --set the card_number(feild) as the forign key
-alter table bills add FOREIGN key(card_number) REFERENCES credit_card(card_number);
+ alter table bills add FOREIGN key(card_number) REFERENCES credit_card(card_number);
 --insert the records to the bills table
 
 insert into bills values(bill_id_seq.NEXTVAL, 23432122863, 4999, '05/10/2023' ,234);
