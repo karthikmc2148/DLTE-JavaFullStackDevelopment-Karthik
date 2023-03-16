@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DLTE-java-review-03-(StudentDetails-JDBC)" />
+        <module name="DLTE-review-02-(StudentDetails-FileStorage)" />
       </profile>
     </annotationProcessing>
   </component>
