@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab86054a-14fe-45ba-a76f-f10f8c710099" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLTE-review-02-(StudentDetails-FileStorage).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review.doc/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review.doc/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review.doc/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review.doc/.idea/review.doc.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review.doc/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2N3teugblTsc8vwYGeTl8KiuPBa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../DLTE-java-review" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab86054a-14fe-45ba-a76f-f10f8c710099" name="Default Changelist" comment="" />
+      <created>1678904691407</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678904691407</updated>
+      <workItem from="1678940275667" duration="145000" />
+      <workItem from="1678940442644" duration="160000" />
+      <workItem from="1678990142937" duration="363000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1678940602245">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1678940602245" />
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1678990143205">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1678990143205" />
+    <state x="91" y="46" key="new project wizard" timestamp="1678990506261">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="91" y="46" key="new project wizard/0.0.1280.672@0.0.1280.672" timestamp="1678990506261" />
+  </component>
+</project>

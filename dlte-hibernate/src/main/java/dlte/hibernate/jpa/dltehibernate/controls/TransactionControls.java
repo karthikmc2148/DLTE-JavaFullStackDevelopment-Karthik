@@ -26,7 +26,7 @@ public class TransactionControls {
     return transactionService.implementationOfFindById(transactionId);
   }
   @DeleteMapping("/del/{transactionId}")
-  public String deleteByIdMethodCalling(@PathVariable("transactoinId") long transactionId){
+  public String deleteByIdMethodCalling(@PathVariable("transactionId") long transactionId){
     return transactionService.implementOfDeleteById(transactionId);
   }
   @PutMapping("/update")
