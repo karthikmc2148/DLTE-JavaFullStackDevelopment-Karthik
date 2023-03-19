@@ -1,16 +1,17 @@
-package dlte.hibernate.jpa.dltehibernate.services;
+package dlite.hibernate.dltehibernatejparepository.services;
 
-import dlte.hibernate.jpa.dltehibernate.model.Transaction;
-import dlte.hibernate.jpa.dltehibernate.remote.TransactionRepository;
+import dlite.hibernate.dltehibernatejparepository.model.Transaction;
+import dlite.hibernate.dltehibernatejparepository.remote.TransactionRepository;
+import dlite.hibernate.dltehibernatejparepository.model.Transaction;
+import dlite.hibernate.dltehibernatejparepository.remote.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 
-//@Service
+@Service
 public class TransactionService {
     @Autowired
     private TransactionRepository transactionRepository;

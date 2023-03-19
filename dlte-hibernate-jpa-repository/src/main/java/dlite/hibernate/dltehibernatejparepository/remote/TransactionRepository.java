@@ -1,10 +1,11 @@
-package dlte.hibernate.jpa.dltehibernate.remote;
+package dlite.hibernate.dltehibernatejparepository.remote;
 
-import dlte.hibernate.jpa.dltehibernate.model.Transaction;
+import dlite.hibernate.dltehibernatejparepository.model.Transaction;
+
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-//@Repository
+@Repository
 public interface TransactionRepository extends CrudRepository<Transaction,Integer> {
 
 }

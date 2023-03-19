@@ -1,13 +1,15 @@
-package dlte.hibernate.jpa.dltehibernate.controls;
-import dlte.hibernate.jpa.dltehibernate.model.Transaction;
-import dlte.hibernate.jpa.dltehibernate.services.TransactionService;
+package dlite.hibernate.dltehibernatejparepository.controls;
+
+
+import dlite.hibernate.dltehibernatejparepository.model.Transaction;
+import dlite.hibernate.dltehibernatejparepository.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.Optional;
 
-//@RestController
+@RestController
 public class TransactionControls {
   @Autowired
     private TransactionService transactionService;
@@ -15,7 +17,7 @@ public class TransactionControls {
     public Transaction saveMethodCalling(@RequestBody Transaction transaction){
       return transactionService.implementationOfSave(transaction);
   }
-  @PostMapping("/findAll")
+  @GetMapping("/findAll")
   public List<Transaction> findAllMethodCalling(){
     return transactionService.implementationOfFindAll();
   }
@@ -28,7 +30,7 @@ public class TransactionControls {
     return transactionService.implementOfDeleteById(transactionId);
   }
   @PutMapping("/update")
-  public Transaction updateMethodImplementation(@RequestBody Transaction transactions){
-    return transactionService.implementationOfSave(transactions);
+  public Transaction updateMethodImplementation(@RequestBody Transaction transaction){
+    return transactionService.implementationOfSave(transaction);
   }
 }
