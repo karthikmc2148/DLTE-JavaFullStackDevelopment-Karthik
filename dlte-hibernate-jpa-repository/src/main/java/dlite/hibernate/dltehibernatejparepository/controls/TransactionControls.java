@@ -33,5 +33,16 @@ public class TransactionControls {
   public Transaction updateMethodImplementation(@RequestBody Transaction transaction){
     return transactionService.implementationOfSave(transaction);
   }
+  @GetMapping("/listSenderTransactions/{sender}")
+  public List<Transaction> findAllBySenderCalling(@PathVariable("sender") String sender){
+    return transactionService.implementationOfFindAllBySender(sender);
+  }
+  @GetMapping("/greaterThanAmount/{amount}")
+  public List<Transaction> findAllByAmountCalling(@PathVariable("amount") float amount){
+    return transactionService.implementationOfFindAllByAmount(amount);
+  }
+  @GetMapping("/listOfAmounts/{type}")
+  public List<Float> findAllByTypeCalling(@PathVariable("type") String type){
+    return transactionService.implementationOfFindAllByType(type);
+  }
 }
-//

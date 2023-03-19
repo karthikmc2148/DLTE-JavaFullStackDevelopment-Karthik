@@ -34,5 +34,13 @@ public class TransactionService {
         transactionRepository.deleteById(transactionId);
         return information;
     }
-
+    public List<Transaction> implementationOfFindAllBySender(String sender){
+        return transactionRepository.findAllBySender(sender);
+    }
+    public List<Transaction> implementationOfFindAllByAmount(float amount){
+        return  transactionRepository.findAllByAmount(amount);
+    }
+    public List<Float> implementationOfFindAllByType(String type){
+        return  transactionRepository.findAllByType(type);
+    }
 }
