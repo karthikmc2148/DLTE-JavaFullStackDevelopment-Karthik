@@ -14,7 +14,7 @@ public class StudentImplements implements StudentInterface {
     File file = new File("C:\\DLTE-Java-full-Stack-Development\\DLTE-review-02-(StudentDetails-FileStorage)\\studentDetails.doc");
 
     public StudentImplements() throws IOException {
-        writeRecords(studentList);
+       // writeRecords(studentList);
     }
     @Override
     public void  writeRecords(ArrayList<Student> studentList) throws IOException {

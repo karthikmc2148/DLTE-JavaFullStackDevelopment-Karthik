@@ -22,7 +22,7 @@ public class Student implements Serializable {
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-class Address{
+class Address implements Serializable{
     private String locality;
     private String area;
     private String city;
