@@ -20,22 +20,22 @@ public class StudentImplements implements StudentInterface {
     public void jdbcConnection() throws SQLException {
         driver = new OracleDriver();
         DriverManager.registerDriver(driver);
-       connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","Passward@4444");
+       connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","razak","razak123");
        System.out.println("Successfully connected to Oracle DB");
     }
 
 
     @Override
     public void insert(Student student,Address address) throws SQLException {
-        setQuery("insert into student values( ?,?,?,?, student_seq.NEXTVAL");
-        preparedStatement = connection.prepareStatement(getQuery());
+        query="insert into student values( ?,?,?,?, address_seq.NEXTVAL)";
+        preparedStatement = connection.prepareStatement(query);
         preparedStatement.setInt(1,student.getRegister_number());
         preparedStatement.setString(2,student.getName());
         preparedStatement.setInt(3,student.getAge());
         preparedStatement.setString(4, student.getEmail());
         preparedStatement.executeQuery();
         int x = preparedStatement.executeUpdate();
-        setQuery("insert into address values(address_seq.CURVAL,?,?,?,?");
+        query = "insert into address values(address_seq.CURRVAL,?,?,?,?)";
         preparedStatement  = connection.prepareStatement(getQuery());
         preparedStatement.setString(1,address.getLocality());
         preparedStatement.setString(2,address.getArea());
@@ -50,8 +50,8 @@ public class StudentImplements implements StudentInterface {
 
     @Override
     public void viewDetails() throws SQLException {
-        setQuery("Select * from student, address where address_id = add_id");
-        preparedStatement = connection.prepareStatement(getQuery());
+        query = "Select * from student, address where address_id = add_id";
+        preparedStatement = connection.prepareStatement(query);
         resultSet = preparedStatement.executeQuery();
         while(resultSet.next()) {
             System.out.println(resultSet.getInt("register_number")+" "+resultSet.getString("student_name")+" "+resultSet.getInt("student_age")+" "+resultSet.getString("student_email")+" "+" "+resultSet.getString("locality")+" "+resultSet.getString("area")+" "+resultSet.getString("city")+" "+resultSet.getInt("pincode"));
@@ -61,11 +61,12 @@ public class StudentImplements implements StudentInterface {
 
     @Override
     public void delete(int  reg_no) throws SQLException {
-     setQuery("delete from students where register_number = ?");
-     preparedStatement = connection.prepareStatement(getQuery());
-     resultSet = preparedStatement.executeQuery();
-     if(preparedStatement.executeUpdate()>0)
-         System.out.println("Deleted Successfully!!");
-     else System.out.println("Deletion not performed");
+        query = "delete from student where register_number = ?";
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1,reg_no);
+        if(preparedStatement.executeUpdate()>0)
+         System.out.println("Deletion performed Successfully!!");
+        else
+        System.out.println(" Deletion not performed");
     }
 }

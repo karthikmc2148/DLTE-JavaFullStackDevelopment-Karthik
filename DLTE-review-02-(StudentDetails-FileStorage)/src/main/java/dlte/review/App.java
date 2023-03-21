@@ -14,14 +14,15 @@ import static java.lang.System.exit;
 public class App { 
     public static void main( String[] args ) throws IOException, ClassNotFoundException {
         Scanner scanner  = new Scanner(System.in);
-        Student student = new Student();
-        Address address = new Address();
+
         StudentImplements studentImplements = new StudentImplements();
         do {
             System.out.println("----------------------------------Student Details----------------------------------");
             System.out.println("Select the operation to be performed: \n 1.Add New Student Details\n 2.Display All students details\n 3.Exit");
             switch (scanner.nextInt()) {
                 case 1:
+                    Student student = new Student();
+                    Address address = new Address();
                     System.out.println("Enter the student Name");
                     student.setName(scanner.next());
                     System.out.println("Enter the student Register Number");
@@ -39,7 +40,9 @@ public class App {
                     address.setCity(scanner.next());
                     System.out.println("PIN Code : ");
                     address.setPin(scanner.nextInt());
-                    studentImplements.writeRecords(student);
+                    student.setAddress(address);
+                    studentImplements.studentList.add(student);
+                    studentImplements.writeRecords(studentImplements.studentList);
                 case 2:
                     System.out.println("--------------------------------All Student Details-----------------------------------");
                     ArrayList<Student> studentArrayList = studentImplements.readRecords();
