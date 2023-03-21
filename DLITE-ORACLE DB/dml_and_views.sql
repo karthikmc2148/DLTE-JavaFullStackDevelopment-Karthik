@@ -6,5 +6,3 @@ create view major_customer as select card_holder, card_limit from credit_card wh
 
 create type card_holder_names as table of varchar(255);
 select cast(collect(card_holder) as card_holder_names)  from allfeilds;
-
-create table transaction(id int not null, created_date date not null, amount int not null, merchant varchar(255) not null, card_number int not null);
