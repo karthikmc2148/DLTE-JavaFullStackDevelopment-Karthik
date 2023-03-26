@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DLTE-servlets:war" />
+      <artifact name="DLTE-servlets:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="59dbebe0-3b87-4e6d-b1ef-87e8fc269f61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../DLTE-review-02-(StudentDetails-FileStorage)/src/main/java/dlte/review/CustomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/DLTE-java-review-03-(StudentDetails-JDBC).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/src/main/java/review03/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/src/main/java/review03/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/src/main/java/review03/StudentImplements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/src/main/java/review03/StudentInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/src/test/java/review03/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/target/classes/review03/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/target/classes/review03/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/target/classes/review03/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/target/classes/review03/StudentImplements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/target/classes/review03/StudentInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-java-review/target/test-classes/review03/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-review-02-(StudentDetails-FileStorage)/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-review-02-(StudentDetails-FileStorage)/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-review-02-(StudentDetails-FileStorage)/src/main/java/dlte/review/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-review-02-(StudentDetails-FileStorage)/src/main/java/dlte/review/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-review-02-(StudentDetails-FileStorage)/target/classes/dlte/review/App.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NNcQckpglv8CWocPFPmpeeNpoy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DLTE-review-04-(StudentDetails-servlets,jsp,DB)" />
+  </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.server1">
+    <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8082/DLTE_servlets_war/index.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="login.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8082/DLTE_servlets_war/login.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="DLTE-servlets:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/DLTE_servlets_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_DLTE-servlets" />
+        <option name="HTTP_PORT" value="8082" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62063" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="DLTE-servlets:war" />
+          <artifact name="DLTE-servlets:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8082/DLTE_servlets_war/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="DLTE-servlets:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/DLTE_servlets_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_DLTE-servlets" />
+        <option name="HTTP_PORT" value="8082" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62063" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="DLTE-servlets:war" />
+          <artifact name="DLTE-servlets:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="DLTE-servlets:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/DLTE_servlets_war" />
+          </settings>
+        </artifact>
+        <artifact name="DLTE-servlets:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/DLTE_servlets_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_DLTE-servlets" />
+        <option name="HTTP_PORT" value="8082" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62063" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="DLTE-servlets:war" />
+          <artifact name="DLTE-servlets:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="server1" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="DLTE-servlets:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/DLTE_servlets_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_(1)_DLTE-servlets_2" />
+        <option name="HTTP_PORT" value="8082" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62063" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="DLTE-servlets:war" />
+          <artifact name="DLTE-servlets:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.index.jsp" />
+      <item itemvalue="JavaScript Debug.login.jsp" />
+      <item itemvalue="Tomcat Server.server1" />
+      <item itemvalue="Tomcat Server.Unnamed" />
+      <item itemvalue="Tomcat Server.index.jsp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.login.jsp" />
+        <item itemvalue="JavaScript Debug.index.jsp" />
+        <item itemvalue="Tomcat Server.index.jsp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59dbebe0-3b87-4e6d-b1ef-87e8fc269f61" name="Default Changelist" comment="" />
+      <created>1679507964324</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679507964324</updated>
+      <workItem from="1679507968880" duration="6425000" />
+      <workItem from="1679545340197" duration="20000" />
+      <workItem from="1679548092423" duration="14082000" />
+      <workItem from="1679592701284" duration="17723000" />
+      <workItem from="1679826518314" duration="1015000" />
+      <workItem from="1679830590679" duration="9293000" />
+      <workItem from="1679859072040" duration="669000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1679593416335">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.672@0.0.1280.672" timestamp="1679593416335" />
+    <state x="221" y="36" key="CommitChangelistDialog2" timestamp="1679859594845">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="221" y="36" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1679859594845" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1679859744493">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1679859744493" />
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.1.bottom" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.1.center" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.1.left" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.1.right" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.2.bottom" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.2.bottom/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.2.center" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.2.center/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.2.left" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.2.left/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state width="1237" height="2" key="GridCell.Tab.2.right" timestamp="1679859746030">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.2.right/0.0.1280.672@0.0.1280.672" timestamp="1679859746030" />
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1679859071609">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1679859071609" />
+  </component>
+</project>
