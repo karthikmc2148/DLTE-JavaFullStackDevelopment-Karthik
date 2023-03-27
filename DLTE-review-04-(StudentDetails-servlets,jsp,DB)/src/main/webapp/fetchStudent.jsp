@@ -24,11 +24,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
+<%
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+    if(session.getAttribute("student")!=null){
+%>
 <% List<Student> studentList = (List<Student>)request.getAttribute("studentDB");
 pageContext.setAttribute("list",studentList, pageContext.APPLICATION_SCOPE);%>
 <div class="container">
     <div class="d-flex justify-content-end mt-5">
-        <a href="login.jsp" class="btn btn-outline-danger"><i class="bi bi-box-arrow-left">Logout</i></a>
+        <a href="logout" class="btn btn-outline-danger"><i class="bi bi-box-arrow-left">Logout</i></a>
     </div>
     <div class=" row justify-content-center mt-3">
     <table class="table table-bordered table-hover table-sm">
@@ -44,7 +48,7 @@ pageContext.setAttribute("list",studentList, pageContext.APPLICATION_SCOPE);%>
               <td><%=student.getName() %></td>
               <td><%=student.getAge() %></td>
               <td><%=student.getEmail() %></td>
-              <td><a href="address.jsp" class="btn btn-outline-warning"><i class="bi bi-geo-alt-fill">Current</i></a> <a href="address.jsp" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill">Permanent</i></a> </td>
+              <td><a href="address.jsp?reg=<%=student.getRegister_number()%>" class="btn btn-outline-warning"><i class="bi bi-geo-alt-fill">Current</i></a> <a href="address.jsp" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill">Permanent</i></a> </td>
               <td> <a class="btn btn-outline-danger">
                   <i class="bi bi-person-x"></i>
               </a>
@@ -59,5 +63,9 @@ pageContext.setAttribute("list",studentList, pageContext.APPLICATION_SCOPE);%>
         <a href="insertStudent.jsp" class="btn btn-outline-success"><i class="bi bi-database-fill-add">Add new Student</i></a>
     </div>
 </div>
+<%}
+    else
+    response.sendRedirect("login.jsp");
+%>
 </body>
 </html>

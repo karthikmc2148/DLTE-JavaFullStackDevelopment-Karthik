@@ -47,4 +47,3 @@ public class fetchServlet extends HttpServlet {
         }
     }
 }
-//

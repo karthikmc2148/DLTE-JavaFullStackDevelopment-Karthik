@@ -91,6 +91,7 @@ public class insertServlet extends HttpServlet {
             if(acknowledgment1>0 && acknowledgment2>0 && acknowledgment3 >0 && acknowledgment4>0 && acknowledgment5>0) {
                 logger.log(Level.FINE, "student details inserted Successfully!!");
                 request.setAttribute("information", "Student Details registerd in DB");
+                requestDispatcher.forward(request,response);
             }
             else {
                 logger.log(Level.WARNING,"Student Details not inserted");

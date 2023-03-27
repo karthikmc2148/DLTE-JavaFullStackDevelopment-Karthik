@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.*;
 
@@ -21,7 +22,7 @@ public class LoginServlet extends HttpServlet {
             Driver driver = new OracleDriver();
             DriverManager.registerDriver(driver);
             Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","karthik","Passward@4444");
-            String query = "select * from admin where admin_Id=? and pass_code=?";
+            String query = "select * from admin where admin_id=? and pass_code=?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1,adminId);
             preparedStatement.setString(2,passCode);
@@ -29,7 +30,9 @@ public class LoginServlet extends HttpServlet {
             if(resultSet.next()){
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
                 request.setAttribute("LoginAccessed","authenticated");
-                requestDispatcher.forward(request,response);
+                HttpSession httpSession = request.getSession();
+                httpSession.setAttribute("student",resultSet.getInt("admin_id"));
+                requestDispatcher.forward(request, response);
             }
             else{
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");

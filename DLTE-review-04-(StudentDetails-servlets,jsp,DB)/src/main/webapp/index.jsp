@@ -11,12 +11,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </head>
 <body>
+<%
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+    if(session.getAttribute("student")!=null){
+%>
  <div class = "container">
      <div class="d-flex justify-content-end mt-5">
-         <a href="login.jsp" class="btn btn-outline-danger"><i class="bi bi-box-arrow-left">Logout</i></a>
+         <a href="logout" class="btn btn-outline-danger"><i class="bi bi-box-arrow-left">Logout</i></a>
      </div>
      <div class="row justify-content-end ">
-         <a href="login.jsp"><i class="bi bi-box-arrow-left"></i></a>
+         <a href="logout"><i class="bi bi-box-arrow-left"></i></a>
      </div>
     <div class = "row text-light text-bg-primary rounded-4 mt-5 justify-content-center">
         <h2 class="col-3">Student Details!!</h2>
@@ -40,5 +44,9 @@
    </div>
 
  </div>
+<%}
+else{
+    response.sendRedirect("login.jsp");
+}%>
 </body>
 </html>

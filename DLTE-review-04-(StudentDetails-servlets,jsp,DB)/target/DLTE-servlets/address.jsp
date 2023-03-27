@@ -11,6 +11,8 @@
     <title>Title</title>
 </head>
 <body>
+<%=request.getParameter("reg")%>
 <h5>address details!!</h5>
+
 </body>
 </html>
