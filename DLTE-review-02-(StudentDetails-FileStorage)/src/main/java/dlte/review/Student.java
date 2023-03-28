@@ -18,6 +18,10 @@ public class Student implements Serializable {
     private int age;
     private String email;
     private Address address;
+    static void validate(int age) throws InvalidAgeException {
+        if (age <= 0 && age >= 26)
+            throw new  InvalidAgeException();
+    }
 }
 @Data
 @AllArgsConstructor

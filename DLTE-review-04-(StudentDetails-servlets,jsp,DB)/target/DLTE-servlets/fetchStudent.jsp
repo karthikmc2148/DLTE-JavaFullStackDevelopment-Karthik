@@ -48,9 +48,9 @@ pageContext.setAttribute("list",studentList, pageContext.APPLICATION_SCOPE);%>
               <td><%=student.getName() %></td>
               <td><%=student.getAge() %></td>
               <td><%=student.getEmail() %></td>
-              <td><a href="address.jsp?reg=<%=student.getRegister_number()%>" class="btn btn-outline-warning"><i class="bi bi-geo-alt-fill">Current</i></a> <a href="address.jsp" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill">Permanent</i></a> </td>
-              <td> <a class="btn btn-outline-danger">
-                  <i class="bi bi-person-x"></i>
+              <td><a href="currentAddress?reg=<%=student.getRegister_number()%>" class="btn btn-outline-warning"><i class="bi bi-geo-alt-fill">Current</i></a> <a href="permanentAddress?reg=<%= student.getRegister_number()%>" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill">Permanent</i></a> </td>
+              <td> <a href="delete?reg=<%=student.getRegister_number()%>" class="btn btn-outline-danger">
+                 <i class="bi bi-person-x"></i>Delete
               </a>
               </td>
           </tr>

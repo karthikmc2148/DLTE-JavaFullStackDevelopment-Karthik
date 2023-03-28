@@ -12,7 +12,7 @@ import static java.lang.System.exit;
  *
  */
 public class App { 
-    public static void main( String[] args ) throws IOException, ClassNotFoundException,CustomException {
+    public static void main( String[] args ) throws IOException, ClassNotFoundException {
         Scanner scanner  = new Scanner(System.in);
         Scanner scanner1  = new Scanner(System.in);
         StudentImplements studentImplements = new StudentImplements();
@@ -24,26 +24,30 @@ public class App {
                 case 1:
                     Student student = new Student();
                     //Address address = new Address();
-
-                    while(success){
-                        try{
                             System.out.println("Enter the student Name");
                             student.setName(scanner1.nextLine());
+
+                    success = true;
+                    while(success){
+                        try{
+                            System.out.println("Enter the student Register Number");
+                            student.setRegisterNumber(scanner.nextInt());
                             success = false;
                         }
-                        catch(Exception e){
+                        catch(InputMismatchException e){
                             System.out.println("Invalid input!!");
+                            Scanner scanner2  = new Scanner(System.in);
+                            System.out.println("Enter the student Register Number");
+                            student.setRegisterNumber(scanner2.nextInt());
                         }
                     }
-
-                    System.out.println("Enter the student Register Number");
-                    student.setRegisterNumber(scanner.nextInt());
                     try {
                         System.out.println("Enter the student age");
                         student.setAge(scanner.nextInt());
-                        CustomException.validate(student.getAge());
+                        student.validate(student.getAge());
+                        throw new InvalidAgeException();
                     }
-                     catch(CustomException e){
+                     catch(InvalidAgeException e){
                         System.out.println(e);
                      }
                     System.out.println( "Enter the student EmailId");

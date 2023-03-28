@@ -13,13 +13,3 @@ public class Student {
     private int age;
     private String email;
 }
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class Address{
-    private int doorNumber;
-    private String street;
-    private String city;
-    private Integer pinCode;
-    private String type;
-}

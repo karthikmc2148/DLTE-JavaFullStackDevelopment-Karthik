@@ -24,7 +24,7 @@
                  </div>
                  <div class="form group">
                      <label>Password</label>
-                     <input type="text" name="passCode" class="form-control" />
+                     <input type="password" name="passCode" class="form-control" />
                  </div>
                  <div class="mt-2 row justify-content-around">
                      <input type="submit" value="submit" class="col-2 btn btn-success"/>
