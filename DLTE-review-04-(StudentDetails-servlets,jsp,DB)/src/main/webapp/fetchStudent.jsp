@@ -38,7 +38,7 @@ pageContext.setAttribute("list",studentList, pageContext.APPLICATION_SCOPE);%>
     <table class="table table-bordered table-hover table-sm">
         <thead>
         <tr class="bg-info">
-            <th>register_number</th><th>Student Name</th><th>Student age</th><th>Student email</th><th>Address Type</th>
+            <th>register_number</th><th>Student Name</th><th>Student age</th><th>Student email</th><th>Address Type</th><th class="bg-danger">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -50,7 +50,7 @@ pageContext.setAttribute("list",studentList, pageContext.APPLICATION_SCOPE);%>
               <td><%=student.getEmail() %></td>
               <td><a href="currentAddress?reg=<%=student.getRegister_number()%>" class="btn btn-outline-warning"><i class="bi bi-geo-alt-fill">Current</i></a> <a href="permanentAddress?reg=<%= student.getRegister_number()%>" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill">Permanent</i></a> </td>
               <td> <a href="delete?reg=<%=student.getRegister_number()%>" class="btn btn-outline-danger">
-                 <i class="bi bi-person-x"></i>Delete
+                 <i class="bi bi-person-x"></i>
               </a>
               </td>
           </tr>

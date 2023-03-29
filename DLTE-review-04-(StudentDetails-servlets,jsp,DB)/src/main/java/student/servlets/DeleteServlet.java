@@ -19,7 +19,6 @@ public class DeleteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int registerNumber = Integer.parseInt(request.getParameter("reg"));
         ArrayList<Integer> arrayList = new ArrayList<>();
@@ -31,30 +30,34 @@ public class DeleteServlet extends HttpServlet {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1,registerNumber);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()){
+            while (resultSet.next()){
                 arrayList.add(resultSet.getInt("add_id"));
             }
-           query= "delete from address_mapper,student where reg_number=?";
+           query= "delete from address_mapper where reg_number=?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1,registerNumber);
             int ack1= preparedStatement.executeUpdate();
 
-            query="delete from address where address_id=? or address_id=?";
+            query= "delete from student where register_number=?";
             preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1,registerNumber);
+            int ack3= preparedStatement.executeUpdate();
+
+            preparedStatement = connection.prepareStatement("delete from address where address_id in (?,?)");
             preparedStatement.setInt(1, arrayList.get(0));
             preparedStatement.setInt(2,arrayList.get(1));
             int ack2 = preparedStatement.executeUpdate();
-            if(ack1>0 && ack2>0) {
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("fetchStudent.jsp");
+            if(ack1>0 && ack2>0 && ack3>0) {
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("studentDetails");
                 PrintWriter printWriter = response.getWriter();
                 printWriter.println("Deleted the student record successfully!!");
                 requestDispatcher.forward(request, response);
             }
             else {
-                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("fetchStudent.jsp");
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("studentDetails");
                     request.setAttribute("deleted","Deletion not performed");
                     requestDispatcher.forward(request,response);
-                    requestDispatcher.forward(request, response);
+                    //requestDispatcher.forward(request, response);
                 }
 
         } catch (SQLException e) {
