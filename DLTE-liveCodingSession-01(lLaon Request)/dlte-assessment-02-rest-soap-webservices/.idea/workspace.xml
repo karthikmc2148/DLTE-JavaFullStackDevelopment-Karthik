@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="943f76ff-9158-4214-a727-a58a662e68fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/target/classes/studentDetails/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-DAO-Dependency(StudentDetails-servlets, JSP, DB)/target/test-classes/studentDetails/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-review-04-(StudentDetails-servlets,jsp,DB)/target/DLTE-servlets.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-review-04-(StudentDetails-servlets,jsp,DB)/target/DLTE-servlets.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-review-04-(StudentDetails-servlets,jsp,DB)/target/DLTE-servlets/WEB-INF/classes/student/servlets/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-review-04-(StudentDetails-servlets,jsp,DB)/target/DLTE-servlets/WEB-INF/classes/student/servlets/DeleteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-review-04-(StudentDetails-servlets,jsp,DB)/target/classes/student/servlets/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-review-04-(StudentDetails-servlets,jsp,DB)/target/classes/student/servlets/DeleteServlet.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\DLTE-Java-full-Stack-Development\DLTE-liveCodingSession-01(lLaon Request)\dlte-assessment-02-rest-soap-webservices\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NuewqRW3x4ZfHCXmszlMZLlXWf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="943f76ff-9158-4214-a727-a58a662e68fb" name="Default Changelist" comment="" />
+      <created>1680518635479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680518635479</updated>
+      <workItem from="1680518639788" duration="55000" />
+      <workItem from="1680518742083" duration="604000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1680518684446">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.672@0.0.1280.672" timestamp="1680518684446" />
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1680518742936">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1680518742936" />
+    <state x="91" y="46" key="new project wizard" timestamp="1680519349894">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="91" y="46" key="new project wizard/0.0.1280.672@0.0.1280.672" timestamp="1680519349894" />
+  </component>
+</project>
