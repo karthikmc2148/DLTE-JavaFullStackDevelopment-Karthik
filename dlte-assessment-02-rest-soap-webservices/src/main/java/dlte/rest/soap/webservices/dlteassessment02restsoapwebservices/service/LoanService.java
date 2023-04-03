@@ -5,6 +5,8 @@ import dlte.rest.soap.webservices.dlteassessment02restsoapwebservices.remote.Loa
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LoanService {
   @Autowired
@@ -20,5 +22,8 @@ public class LoanService {
     public String implementationOfLoanNotApproval(){
         loanRepository.loanNotApproval();
         return "Updated the Loan not Approval Status";
-    }
+  }
+  public List<LoanApplication> implementationOfStatusOfNotApproval(){
+      return loanRepository.findAllByStatusOfNotApproval();
+  }
 }

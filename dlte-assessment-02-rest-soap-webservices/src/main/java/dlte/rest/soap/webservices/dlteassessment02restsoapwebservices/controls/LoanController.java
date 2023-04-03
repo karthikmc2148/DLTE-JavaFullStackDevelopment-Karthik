@@ -6,6 +6,8 @@ import dlte.rest.soap.webservices.dlteassessment02restsoapwebservices.service.Lo
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/loan")
 public class LoanController {
@@ -13,8 +15,19 @@ public class LoanController {
     private LoanService loanService;
 
     @PostMapping("/insert")
-    LoanApplication callingSaveMethod(@RequestBody LoanApplication loanApplication){
+     public LoanApplication callingSaveMethod(@RequestBody LoanApplication loanApplication){
         return loanService.implementationOfSave(loanApplication);
     }
-
+    @GetMapping("/setApproval")
+    public String callingLoanApprovalMethod(){
+        return loanService.implementationOfLoanApproval();
+    }
+    @GetMapping("/setNotApproval")
+    public String callingLoanNotApprovalMethod(){
+        return loanService.implementationOfLoanNotApproval();
+    }
+    @GetMapping("/listNotApproval")
+    public List<LoanApplication> callingListOfNotApproval(){
+        return loanService.implementationOfStatusOfNotApproval();
+    }
 }

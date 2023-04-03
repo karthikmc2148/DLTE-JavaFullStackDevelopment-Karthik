@@ -21,7 +21,8 @@ public interface LoanRepository extends JpaRepository<LoanApplication,Integer> {
     @Query("update LoanApplication set statusOfApproval='not-approved' where cibil<700 or profession not in('salaried', 'self-employed') or incomePerAnnum<=3*:amount")
     public void loanNotApproval();
 
-    public List<LoanApplication> findAllByStatusOfApproval(String status);
+    @Query("from LoanApplication where statusOfApproval='not-approved' ")
+    public List<LoanApplication> findAllByStatusOfNotApproval();
 
     public LoanApplication save(LoanApplication loanApplication);
 
