@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    let customers;
+
+    $(document).ready(function(){
+        $.get("http://localhost:8082/bank/allCustomers", function(data) {
+            customers = data;
+            // $(".rows").remove()
+            $.each(data,function(index,item) {
+                $("tbody").append("<tr class='rows'><td>" + item.customerId+ "</td><td>" + item.customerName+ "</td><td>" + item.customerAddress + "</td><td>" + item.customerStatus + "</td><td>" + item.customerContact + "</td><td>" + item.userName + "</td><td>" + item.password + "</td></tr>");
+            })
+        })
+        $("#id").onchange(()=>{
+            const customerId = $("#id").val();
+            customers.map((val)=>{
+                if(val.customerId.includes(customerId)){
+                    $("tbody").append("<tr class='row'><td>" + val.customerId+ "</td><td>" + val.customerName+ "</td><td>" + val.customerAddress + "</td><td>" +val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td><td>" + val.password + "</td></tr>");
+                }
+                else $("tbody").append("Invalid Customer Id!!")
+
+                }
+            )
+            }
+        )
+       $("#name").onchange(()=>{
+           const customerName = $("#name").val();
+           customers.map((val)=>{
+                   if(val.customerName.includes(customerName)){
+                       $("tbody").append("<tr class='row'><td>" + val.customerId+ "</td><td>" + val.customerName+ "</td><td>" + val.customerAddress + "</td><td>" +val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td><td>" + val.password + "</td></tr>");
+                   }
+                   else $("tbody").append("Invalid UserName!!")
+               }
+           )
+           }
+       )
+
+    });
+</script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row justify-content-center text-dark bg-success rounded-4 mt-3 col-lg-12 col-md-8 col-sm-12"> 
+            <div class="col-10">
+                <div style="margin-left: 200px;">
+                    <h1 class="text-center"> <img id="logo" src="/files/download.png" class="p-2 rounded-4" width="70px"
+                            height="70px" />Customer Details!!</h1>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <a href="login.html"><button class="btn btn-outline-danger rounded-4 me-2 mt-3"><i
+                            class="bi bi-box-arrow-left"></i>Logout</button></a>
+            </div>
+        </div>
+       
+       <div class="row justify-content-around">
+         <div class="col-lg-5 col-md-8 col-sm-12 card bg-primary rounded-4 p-2 mt-2">
+          <p>Origin Bank operates as a full service bank!!<br> The Company offers banking products and services such as savings accounts,<br></p>
+         </div>
+         <div class="col-lg-6 col-md-8 col-sm-12 align-self-center p-2 card bg-primary rounded-4 mt-2">
+            <div class="row justify-content-around">
+                <h2 class="text-dark text-center"><i class="bi bi-search"></i>Search</h2>
+                <div class="col-lg-6 col-sm-12"><input type="text" id="id" name="cusId"  placeholder="Customer ID" class="form-control"/></div>
+                <div class="col-lg-6 col-sm-12"><input type="text" id="name" onchange="collect(this.value)" name="cusName" placeholder="Customer Name" class="form-control" /></div>
+            </div>
+        </div>
+      </div>
+        <div class="table-responsive mt-4 rounded-4">
+            <table  class="table text-dark table-striped p-2 shadow-lg text-nowrap" cellspacing="1px" cellpadding="1px">
+                <thead>
+                    <tr class="bg-info">
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Contact</th>
+                        <th>User Name</th>
+                        <th>Password</th>
+                    </tr>
+                </thead> 
+                <tbody>
+
+                </tbody>    
+            </table>
+        </div>   
+    </div>
+</body>
+</html>

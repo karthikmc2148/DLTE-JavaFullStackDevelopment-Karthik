@@ -1,0 +1,90 @@
+2023-04-14 01:02:35.247  INFO 10472 --- [restartedMain] bank.project.app.AppApplication          : Starting AppApplication using Java 1.8.0_292 on WPG02VB95 with PID 10472 (C:\DLTE-Java-full-Stack-Development\app\target\classes started by xxmcccck in C:\DLTE-Java-full-Stack-Development\app)
+2023-04-14 01:02:35.254  INFO 10472 --- [restartedMain] bank.project.app.AppApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-04-14 01:02:35.293  INFO 10472 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\xxmcccck\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/xxmcccck/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+2023-04-14 01:02:35.293  INFO 10472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-14 01:02:35.293  INFO 10472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-14 01:02:35.798  INFO 10472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-04-14 01:02:35.798  INFO 10472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2023-04-14 01:02:36.194  INFO 10472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-04-14 01:02:36.194  INFO 10472 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-14 01:02:36.194  INFO 10472 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-14 01:02:36.240  INFO 10472 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-14 01:02:36.240  INFO 10472 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 947 ms
+2023-04-14 01:02:36.604  INFO 10472 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-14 01:02:36.604  WARN 10472 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2023-04-14 01:02:36.855  INFO 10472 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-14 01:02:36.934  INFO 10472 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-14 01:02:36.965  INFO 10472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-04-14 01:02:36.981  INFO 10472 --- [restartedMain] bank.project.app.AppApplication          : Started AppApplication in 2.01 seconds (JVM running for 3.474)
+2023-04-14 01:02:56.695  INFO 10472 --- [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-14 01:02:56.695  INFO 10472 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-14 01:02:56.696  INFO 10472 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-14 01:03:07.292  INFO 10472 --- [http-nio-8082-exec-6] bank.project.dao.service.BankService     : role object is returned using username
+2023-04-14 01:03:12.572  INFO 10472 --- [http-nio-8082-exec-6] bank.project.app.control.BankController  : Received All Customers Details!!
+2023-04-14 01:03:12.572  INFO 10472 --- [http-nio-8082-exec-6] bank.project.dao.service.BankService     : customer list is received
+2023-04-14 01:06:15.641  INFO 6984 --- [restartedMain] bank.project.app.AppApplication          : Starting AppApplication using Java 1.8.0_292 on WPG02VB95 with PID 6984 (C:\DLTE-Java-full-Stack-Development\app\target\classes started by xxmcccck in C:\DLTE-Java-full-Stack-Development\app)
+2023-04-14 01:06:15.641  INFO 6984 --- [restartedMain] bank.project.app.AppApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-04-14 01:06:15.685  INFO 6984 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\xxmcccck\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/xxmcccck/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+2023-04-14 01:06:15.685  INFO 6984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-14 01:06:15.685  INFO 6984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-14 01:06:16.285  INFO 6984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-04-14 01:06:16.301  INFO 6984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2023-04-14 01:06:16.841  INFO 6984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-04-14 01:06:16.856  INFO 6984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-14 01:06:16.856  INFO 6984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-14 01:06:16.919  INFO 6984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-14 01:06:16.934  INFO 6984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1249 ms
+2023-04-14 01:06:17.407  INFO 6984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-14 01:06:17.408  WARN 6984 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2023-04-14 01:06:17.812  INFO 6984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-14 01:06:17.913  INFO 6984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-14 01:06:17.961  INFO 6984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-04-14 01:06:17.964  INFO 6984 --- [restartedMain] bank.project.app.AppApplication          : Started AppApplication in 2.704 seconds (JVM running for 4.87)
+2023-04-14 01:06:21.677  INFO 6984 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-14 01:06:21.677  INFO 6984 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-14 01:06:21.677  INFO 6984 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-14 01:06:31.500  INFO 6984 --- [http-nio-8082-exec-6] bank.project.dao.service.BankService     : role object is returned using username
+2023-04-14 01:06:38.429  INFO 6984 --- [http-nio-8082-exec-6] bank.project.app.control.BankController  : Received All Customers Details!!
+2023-04-14 01:06:38.436  INFO 6984 --- [http-nio-8082-exec-6] bank.project.dao.service.BankService     : customer list is received
+2023-04-14 01:08:17.710  INFO 18252 --- [restartedMain] bank.project.app.AppApplication          : Starting AppApplication using Java 1.8.0_292 on WPG02VB95 with PID 18252 (C:\DLTE-Java-full-Stack-Development\app\target\classes started by xxmcccck in C:\DLTE-Java-full-Stack-Development\app)
+2023-04-14 01:08:17.710  INFO 18252 --- [restartedMain] bank.project.app.AppApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-04-14 01:08:17.759  INFO 18252 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\xxmcccck\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/xxmcccck/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+2023-04-14 01:08:17.759  INFO 18252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-14 01:08:17.759  INFO 18252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-14 01:08:18.276  INFO 18252 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-04-14 01:08:18.292  INFO 18252 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2023-04-14 01:08:18.641  INFO 18252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-04-14 01:08:18.648  INFO 18252 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-14 01:08:18.648  INFO 18252 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-14 01:08:18.687  INFO 18252 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-14 01:08:18.687  INFO 18252 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 927 ms
+2023-04-14 01:08:19.002  INFO 18252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-14 01:08:19.002  WARN 18252 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2023-04-14 01:08:19.191  INFO 18252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-14 01:08:19.270  INFO 18252 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-14 01:08:19.309  INFO 18252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-04-14 01:08:19.318  INFO 18252 --- [restartedMain] bank.project.app.AppApplication          : Started AppApplication in 1.943 seconds (JVM running for 2.674)
+2023-04-14 01:08:32.298  INFO 19244 --- [restartedMain] bank.project.app.AppApplication          : Starting AppApplication using Java 1.8.0_292 on WPG02VB95 with PID 19244 (C:\DLTE-Java-full-Stack-Development\app\target\classes started by xxmcccck in C:\DLTE-Java-full-Stack-Development\app)
+2023-04-14 01:08:32.298  INFO 19244 --- [restartedMain] bank.project.app.AppApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-04-14 01:08:32.336  INFO 19244 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\xxmcccck\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/xxmcccck/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+2023-04-14 01:08:32.336  INFO 19244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-14 01:08:32.336  INFO 19244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-14 01:08:32.885  INFO 19244 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-04-14 01:08:32.904  INFO 19244 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2023-04-14 01:08:33.248  INFO 19244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-04-14 01:08:33.267  INFO 19244 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-14 01:08:33.267  INFO 19244 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-14 01:08:33.311  INFO 19244 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-14 01:08:33.311  INFO 19244 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 975 ms
+2023-04-14 01:08:33.643  INFO 19244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-14 01:08:33.643  WARN 19244 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2023-04-14 01:08:33.832  INFO 19244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-14 01:08:33.910  INFO 19244 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-14 01:08:33.942  INFO 19244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-04-14 01:08:33.947  INFO 19244 --- [restartedMain] bank.project.app.AppApplication          : Started AppApplication in 2.011 seconds (JVM running for 2.694)
+2023-04-14 01:08:50.373  INFO 19244 --- [http-nio-8082-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-14 01:08:50.373  INFO 19244 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-14 01:08:50.373  INFO 19244 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-14 01:09:00.549  INFO 19244 --- [http-nio-8082-exec-6] bank.project.dao.service.BankService     : role object is returned using username
+2023-04-14 01:09:07.903  INFO 19244 --- [http-nio-8082-exec-6] bank.project.app.control.BankController  : Received All Customers Details!!
+2023-04-14 01:09:07.905  INFO 19244 --- [http-nio-8082-exec-6] bank.project.dao.service.BankService     : customer list is received
