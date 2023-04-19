@@ -1,0 +1,28 @@
+<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://soap.project.bank"
+        xmlns:tns="http://soap.project.bank"
+        elementFormDefault="qualified">
+    
+<!-- pojo-->  
+    <xsd:complexType name="loan">
+        <xsd:sequence>
+            <xsd:element name="loanAppId" type="xsd:int" />
+            <xsd:element name="loanAmount" type="xsd:double"/>
+            <xsd:element name="loanEmi" type="xsd:double" />
+            <xsd:element name="loanSchemeId" type="xsd:int" />
+            <xsd:element name="customerId" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="listLoanRequest">
+        <xsd:complexType/>
+    </xsd:element>
+    <xsd:element name="listLoanResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="loan" type="tns:loan" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
