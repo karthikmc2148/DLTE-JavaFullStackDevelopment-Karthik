@@ -2,19 +2,29 @@ package bank.project.dao.remote;
 
 import bank.project.dao.model.Customer;
 import bank.project.dao.model.Loan;
+import bank.project.dao.model.LoanScheme;
 import bank.project.dao.model.Role;
 
 import java.util.List;
-import java.util.Optional;
+
 
 public interface BankOperations {
+  //returns role object of desired object
   Role getRoleByUserName(String userName);
+
+  //display customer details and customer_search
     List<Customer> getAllCustomers();
-    Customer getCustomerByName(String customerName);
+    Customer getCustomerByUserName(String customerName);
     Customer getCustomerById(int customerId);
+
+    //Display Loan details
     List<Loan> getAllLoans();
-    Loan getLoanById(int loanAppId);
-    Loan getLoanByCustomerId(int customerId);
-    String authenticate(String userName, String password);
+
+// admin and customer login
+   // String authenticateAdminOrBanker(String userName, String password);
+ // String authenticateCustomer(String userName, String password);
+
+  //loan_Scheme search
+  List<LoanScheme> getAllLoanScheme();
 }
 

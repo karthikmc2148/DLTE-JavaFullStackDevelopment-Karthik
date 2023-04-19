@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+//Role POJO
 public class Role {
     private int roleId;
     private String roleName;
@@ -17,4 +18,6 @@ public class Role {
     private String username;
     private String password;
     private int failedAttempts;
+
+
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,38 +11,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     let customers;
-
+    let count=0;
     $(document).ready(function(){
         $.get("http://localhost:8082/bank/allCustomers", function(data) {
             customers = data;
-            // $(".rows").remove()
             $.each(data,function(index,item) {
                 $("tbody").append("<tr class='rows'><td>" + item.customerId+ "</td><td>" + item.customerName+ "</td><td>" + item.customerAddress + "</td><td>" + item.customerStatus + "</td><td>" + item.customerContact + "</td><td>" + item.userName + "</td><td>" + item.password + "</td></tr>");
             })
         })
-        $("#id").onchange(()=>{
+        $("#idSearch").click(()=>{
             const customerId = $("#id").val();
-            customers.map((val)=>{
-                if(val.customerId.includes(customerId)){
-                    $("tbody").append("<tr class='row'><td>" + val.customerId+ "</td><td>" + val.customerName+ "</td><td>" + val.customerAddress + "</td><td>" +val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td><td>" + val.password + "</td></tr>");
+            customers.map((val)=> {
+                if (val.customerId == customerId) {
+                    $("tbody").html("<tr><td>" + val.customerId + "</td><td>" + val.customerName + "</td><td>" + val.customerAddress + "</td><td>" + val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td><td>" + val.password + "</td></tr>");
                 }
-                else $("tbody").append("Invalid Customer Id!!")
-
-                }
-            )
+            } )
+            if(count>0) {
+                count = 0;
+                alert("Invalid Customer Id");
+            }
             }
         )
-       $("#name").onchange(()=>{
+
+        count=0;
+       $("#nameSearch").click(()=>{
            const customerName = $("#name").val();
            customers.map((val)=>{
                    if(val.customerName.includes(customerName)){
-                       $("tbody").append("<tr class='row'><td>" + val.customerId+ "</td><td>" + val.customerName+ "</td><td>" + val.customerAddress + "</td><td>" +val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td><td>" + val.password + "</td></tr>");
+                       $("tbody").append("<tr><td>" + val.customerId + "</td><td>" + val.customerName+ "</td><td>" + val.customerAddress + "</td><td>" +val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td><td>" + val.password + "</td></tr>");
                    }
-                   else $("tbody").append("Invalid UserName!!")
-               }
-           )
+           })
+           if(count>0) {
+               count = 0;
+               alert("Invalid Customer Name");
            }
-       )
+       })
+
 
     });
 </script>
@@ -60,7 +64,7 @@
 
             </div>
             <div class="col-2">
-                <a href="login.html"><button class="btn btn-outline-danger rounded-4 me-2 mt-3"><i
+                <a th:href="@{~/mvn/login}"><button class="btn btn-outline-danger rounded-4 me-2 mt-3"><i
                             class="bi bi-box-arrow-left"></i>Logout</button></a>
             </div>
         </div>
@@ -70,10 +74,30 @@
           <p>Origin Bank operates as a full service bank!!<br> The Company offers banking products and services such as savings accounts,<br></p>
          </div>
          <div class="col-lg-6 col-md-8 col-sm-12 align-self-center p-2 card bg-primary rounded-4 mt-2">
-            <div class="row justify-content-around">
+            <div class=" row justify-content-center">
                 <h2 class="text-dark text-center"><i class="bi bi-search"></i>Search</h2>
-                <div class="col-lg-6 col-sm-12"><input type="text" id="id" name="cusId"  placeholder="Customer ID" class="form-control"/></div>
-                <div class="col-lg-6 col-sm-12"><input type="text" id="name" onchange="collect(this.value)" name="cusName" placeholder="Customer Name" class="form-control" /></div>
+
+                <div class="col-lg-5 col-sm-12 p-1 mt-1 mb-2">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-6 align-items-center">
+                        <input class=" form-control " type="text" id="id" name="cusId"  placeholder=" ID "  />
+                        </div>
+                        <div class="col-lg-6 align-items-center">
+                     <button class="rounded-2 col-lg-4 " id="idSearch"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12 p-1 mt-1 mb-2">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7" align-items-center>
+                    <input type="text" id="name" name="cusName" placeholder="Name" class="form-control" />
+                        </div>
+                        <div class="col-lg-5 align-items-center">
+                    <button class="rounded-2"  id="nameSearch"><i class="bi bi-search"></i></button>
+                        </div>
+                  </div>
+                </div>
+
             </div>
         </div>
       </div>

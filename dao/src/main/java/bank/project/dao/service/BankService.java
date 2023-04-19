@@ -2,15 +2,20 @@ package bank.project.dao.service;
 
 import bank.project.dao.model.Customer;
 import bank.project.dao.model.Loan;
+import bank.project.dao.model.LoanScheme;
 import bank.project.dao.model.Role;
 import bank.project.dao.remote.BankOperations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
@@ -20,30 +25,38 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 @Service
-public class BankService implements BankOperations {
+public class BankService implements BankOperations, UserDetailsService {
     ResourceBundle resourceBundle = ResourceBundle.getBundle("originBank");
     @Autowired
     private JdbcTemplate jdbcTemplate;
+    //logger for service class using SLF4J
     private Logger logger = LoggerFactory.getLogger(BankService.class);
 
     @Override
+    // provides the role object based on userName
     public Role getRoleByUserName(String userName) {
-        logger.info("role object is returned using username");
-         return jdbcTemplate.queryForObject("select * from role where username=?", new RoleMapper(), userName);
+        try {
+            Role role = jdbcTemplate.queryForObject("select * from role where username=?", new Object[]{userName}, new BeanPropertyRowMapper<>(Role.class));
+            logger.info("role object is returned using username");
+            return role;
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
-
-    @Override
+        @Override
+        //provides the list of customer objects
     public List<Customer> getAllCustomers() {
         logger.info("customer list is received");
         return jdbcTemplate.query("select * from customer", new CustomerMapper());
     }
 
     @Override
-    public Customer getCustomerByName(String customerName) {
+    //provides the customer object based on userName
+    public Customer getCustomerByUserName(String userName) {
         try {
 
-            Customer customer = jdbcTemplate.queryForObject("select * from customer where CUSTOMER_NAME=?", new CustomerMapper(), customerName);
-            logger.info("customer object is received using customerName");
+            Customer customer = jdbcTemplate.queryForObject("select * from customer where username=?", new Object[]{userName}, new BeanPropertyRowMapper<>(Customer.class));
+           logger.info("customer object is received");
             return customer;
         } catch (DataAccessException e) {
             return  null;
@@ -51,16 +64,18 @@ public class BankService implements BankOperations {
     }
 
     @Override
+    //provides the customer object based on customerId
     public Customer getCustomerById(int customerId) {
         try {
             logger.info("customer object is received using customerId");
-            Customer customer = jdbcTemplate.queryForObject("select * from customer where CUSTOMER_ID=?", new CustomerMapper(), customerId);
+            Customer customer = jdbcTemplate.queryForObject("select * from customer where customer_id=?", new Object[]{customerId}, new BeanPropertyRowMapper<>(Customer.class));
         return customer;
         } catch (DataAccessException e) {
             return null;
         }
     }
     @Override
+    //provides the list of loan objects
     public List<Loan> getAllLoans() {
         logger.info("Service is invoked!!");
         List<Loan> loanList = jdbcTemplate.query("select * from loan", new LoanMapper());
@@ -68,56 +83,88 @@ public class BankService implements BankOperations {
         return loanList;
     }
 
-    @Override
-    public Loan getLoanById(int loanAppId){
-        try {
-            Loan loan = jdbcTemplate.queryForObject("select * from loan where LOAN_APP_ID=?", new LoanMapper(), loanAppId);
-            logger.info(" Loan object is returned");
-            return loan;
-        } catch (DataAccessException e) {
-            return null;
-        }
+//    @Override
+//    //method that authenticates, weather the admin or Bank official credential's are valid
+//    public String authenticateAdminOrBanker(String userName, String password) {
+//        Role role = getRoleByUserName(userName);
+//        if (role == null)
+//            return resourceBundle.getString("notFound");
+//        else {
+//            if (role.getRoleStatus().equalsIgnoreCase("Inactive"))
+//                return resourceBundle.getString("deactivated");
+//            else if (!password.equals(role.getPassword())) {
+//                incrementFailedAttemptsToAdminOrBanker(userName);
+//                return resourceBundle.getString("invalidPassword");
+//            } else
+//                setDefaultAttemptsToAdminOrBanker(userName);
+//                return resourceBundle.getString("loginSuccess");
+//        }
+//    }
 
-    }
+//    @Override
+//    //method that authenticates, weather the admin or Bank official credential's are valid
+//    public String authenticateCustomer(String userName, String password) {
+//         Customer customer = getCustomerByUserName(userName);
+//        if (customer == null)
+//            return resourceBundle.getString("notFound");
+//        else {
+//            if (customer.getCustomerStatus().equalsIgnoreCase("Inactive"))
+//
+//                return resourceBundle.getString("deactivated");
+//            else if (!password.equals(customer.getPassword())) {
+//                incrementFailedAttemptsToCustomer(userName);
+//                return resourceBundle.getString("invalidPassword");
+//            } else
+//                setDefaultAttemptsToCustomer(userName);
+//            return resourceBundle.getString("loginSuccess");
+//        }
+//    }
 
     @Override
-    public Loan getLoanByCustomerId(int customerId) {
-        try {
-            Loan loan = jdbcTemplate.queryForObject("select * from loan where CUSTOMER_ID=?", new LoanMapper(), customerId);
-            logger.info(" Loan object is returned");
-            return loan;
-        } catch (DataAccessException e) {
-            logger.info("Loan record not found!!");
-            return null;
-        }
+    //provides the list of LoanScheme Objects
+    public List<LoanScheme> getAllLoanScheme() {
+        logger.info("loan scheme list is received");
+        return jdbcTemplate.query("select * from loan_scheme", new LoanSchemeMapper());
     }
-    @Override
-    public String authenticate(String userName, String password) {
-        Role role = getRoleByUserName(userName);
-        if (role == null)
-            return resourceBundle.getString("notFound");
-        else {
-            if (role.getRoleStatus().equalsIgnoreCase("Inactive"))
-                return resourceBundle.getString("deactivated");
-            else if (!password.equals(role.getPassword())) {
-                incrementfailedAttempts(userName);
-                return resourceBundle.getString("invalidPassword");
-            } else
-                setDefaultAttempts(userName);
-                return resourceBundle.getString("loginSuccess");
-        }
-    }
-    public void incrementfailedAttempts(String userName){
-        logger.error("Updating the Failed Attempts");
+     //increments the Failed attempts for invalid password and deactivates the user if attempts=3
+    public void incrementFailedAttemptsToAdminOrBanker(String userName){
+        logger.error("Updating the Failed Attempts of admin or banker:"+userName);
         jdbcTemplate.update("update role set failed_attempts=failed_attempts+1 where username=?",userName);
         logger.error("deactivating the accounts for Failed attempts=3");
         jdbcTemplate.update("update role set role_status='inactive' where failed_attempts=3");
-//        logger.info(userName + resourceBundle.getString("deactivated"));
     }
-    public void setDefaultAttempts(String userName){
+    //increments the Failed attempts for invalid password and deactivates the user if attempts=3
+    public void incrementFailedAttemptsToCustomer(String userName){
+        logger.error("Updating the Failed Attempts of customer"+userName);
+        jdbcTemplate.update("update customer set failed_attempts=failed_attempts+1 where username=?",userName);
+        logger.error("deactivating the accounts for Failed attempts=3");
+        jdbcTemplate.update("update customer set customer_status='inactive' where failed_attempts=3");
+    }
+    //on successful login reset the attempts of specific user to zero in role object
+    public void setDefaultAttemptsToAdminOrBanker(String userName){
         jdbcTemplate.update("update role set failed_attempts=0 where username=?", userName);
+        logger.info("reset the failed attempts to admin or banker:"+userName);
+    }
+    //on successful login reset the attempts of specific user to zero in role object
+    public void setDefaultAttemptsToCustomer(String userName){
+        jdbcTemplate.update("update role set failed_attempts=0 where username=?", userName);
+        logger.info("reset the failed attempts to Customer:"+userName);
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+         Customer customer = getCustomerByUserName(username);
+         if(customer==null){
+             throw new UsernameNotFoundException("Invalid user!!");
+         }
+        return customer ;
+    }
+    public int getAttempts(int id) {
+        int attempts=jdbcTemplate.queryForObject("select failed_attempts from customer where customer_id=?",Integer.class,id);
+        return attempts;
+    }
+
+    // class that provides the all the records in Loan table
     class LoanMapper implements RowMapper<Loan> {
 
         @Override
@@ -133,7 +180,7 @@ public class BankService implements BankOperations {
             return loan;
         }
     }
-
+    // class that provides the all the records in customer table
     class CustomerMapper implements RowMapper<Customer>{
 
         @Override
@@ -150,6 +197,7 @@ public class BankService implements BankOperations {
             return customer;
         }
     }
+    // class that provides the all the records in role table
     class RoleMapper implements RowMapper<Role>{
         @Override
         public Role mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -163,6 +211,20 @@ public class BankService implements BankOperations {
             role.setPassword(rs.getString("password"));
             role.setFailedAttempts(rs.getInt("failed_attempts"));
             return role;
+        }
+    }
+    // class that provides the all the records in loanScheme table
+    class LoanSchemeMapper implements RowMapper<LoanScheme> {
+
+        @Override
+        public LoanScheme mapRow(ResultSet rs, int rowNum) throws SQLException {
+            LoanScheme loanScheme = new LoanScheme();
+            loanScheme.setLoanSchemeId(rs.getInt("loan_scheme_id"));
+            loanScheme.setLoanSchemeType(rs.getString("loan_scheme_type"));
+            loanScheme.setLoanSchemeName(rs.getString("loan_scheme_name"));
+            loanScheme.setLoanSchemeDescription(rs.getString("loan_scheme_desc"));
+            loanScheme.setLoanSchemeRoi(rs.getFloat("loan_scheme_roi"));
+            return loanScheme;
         }
     }
 }

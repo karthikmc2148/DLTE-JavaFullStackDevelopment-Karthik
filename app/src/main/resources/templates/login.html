@@ -22,11 +22,11 @@
             max-height: 300px;
         }
     </style>
-<!--    <script src="loginValidation.js"></script>-->
+
     <script>
         $(document).ready(()=>{
             $("#submit").click(()=>{
-                $.post('http://localhost:8082/bank/authenticate',{
+                $.post('http://localhost:8082/bank/authenticateAdminOrBanker',{
                     userName:$("#username").val(),
                     password:$("#password").val()
                 }, function(response) {

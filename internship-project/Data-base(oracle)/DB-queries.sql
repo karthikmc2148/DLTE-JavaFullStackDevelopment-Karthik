@@ -33,7 +33,7 @@ insert into branch values(branch_id_seq.NEXTVAL, 'shadinagar branch', 'shivamogg
 
 --Table ROLE--
 
-create table role(role_id int not null, role_name varchar(255) not null,role_desc varchar(255) not null,role_status varchar(255) not null, branch_id int not null, username varchar(255) not null, password varchar(255) not null);
+create table role(role_id int not null, role_name varchar(255) not null,role_desc varchar(255) not null,role_status varchar(255) not null, branch_id int not null, username varchar(255) not null, password varchar(255) not null, failed_attempts);
 
 create sequence role_id_seq start with 100 increment by 1;
 
@@ -43,14 +43,14 @@ alter table role add foreign key(branch_id) references branch(branch_id);
 
 -- insert the values--
 
-insert into role values(role_id_seq.NEXTVAL, 'admin', ' view all customers', 'active', 100, 'karthik', 'karthik123' );
+insert into role values(role_id_seq.NEXTVAL, 'admin', ' view all customers', 'active', 100, 'karthik', 'karthik123',0 );
 
-insert into role values(role_id_seq.NEXTVAL, 'bank official', ' create new loan schemes,view and edit customers', 'inactive', 100, 'gourav', 'gourav123' );
+insert into role values(role_id_seq.NEXTVAL, 'bank official', ' create new loan schemes,view and edit customers', 'inactive', 100, 'gourav', 'gourav123',0 );
 
-insert into role values(role_id_seq.NEXTVAL, 'bank official', ' view all customers', 'active', 101, 'apoorva ', 'apoorva123' );
+insert into role values(role_id_seq.NEXTVAL, 'bank official', ' view all customers', 'active', 101, 'apoorva ', 'apoorva123',0 );
 
 
-insert into role values(role_id_seq.NEXTVAL, 'admin', ' view all customers', 'active', 101, 'manvith', 'manvith123' );
+insert into role values(role_id_seq.NEXTVAL, 'admin', ' view all customers', 'active', 101, 'manvith', 'manvith123',0 );
 
 
 
