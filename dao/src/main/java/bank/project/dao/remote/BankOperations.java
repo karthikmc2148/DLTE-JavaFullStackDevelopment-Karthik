@@ -21,8 +21,8 @@ public interface BankOperations {
     List<Loan> getAllLoans();
 
 // admin and customer login
-   // String authenticateAdminOrBanker(String userName, String password);
- // String authenticateCustomer(String userName, String password);
+    String authenticateAdminOrBanker(String userName, String password);
+  String authenticateCustomer(String userName, String password);
 
   //loan_Scheme search
   List<LoanScheme> getAllLoanScheme();

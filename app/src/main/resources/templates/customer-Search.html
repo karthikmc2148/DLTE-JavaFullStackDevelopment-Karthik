@@ -26,25 +26,25 @@
                     $("tbody").html("<tr><td>" + val.customerId + "</td><td>" + val.customerName + "</td><td>" + val.customerAddress + "</td><td>" + val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td><td>" + val.password + "</td></tr>");
                 }
             } )
-            if(count>0) {
-                count = 0;
+            if ($("tbody").is(':empty')){
                 alert("Invalid Customer Id");
             }
-            }
-        )
+            })
 
-        count=0;
+
        $("#nameSearch").click(()=>{
            const customerName = $("#name").val();
+           $("tbody").remove();
            customers.map((val)=>{
                    if(val.customerName.includes(customerName)){
                        $("tbody").append("<tr><td>" + val.customerId + "</td><td>" + val.customerName+ "</td><td>" + val.customerAddress + "</td><td>" +val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td><td>" + val.password + "</td></tr>");
                    }
            })
-           if(count>0) {
-               count = 0;
-               alert("Invalid Customer Name");
+
+           if ($("tbody").is(':empty')){
+               alert("Invalid Customer Id");
            }
+
        })
 
 

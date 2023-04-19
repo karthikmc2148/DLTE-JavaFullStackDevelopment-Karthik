@@ -13,9 +13,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
 import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
@@ -25,7 +23,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 @Service
-public class BankService implements BankOperations, UserDetailsService {
+public class BankService implements BankOperations {
     ResourceBundle resourceBundle = ResourceBundle.getBundle("originBank");
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -83,42 +81,42 @@ public class BankService implements BankOperations, UserDetailsService {
         return loanList;
     }
 
-//    @Override
-//    //method that authenticates, weather the admin or Bank official credential's are valid
-//    public String authenticateAdminOrBanker(String userName, String password) {
-//        Role role = getRoleByUserName(userName);
-//        if (role == null)
-//            return resourceBundle.getString("notFound");
-//        else {
-//            if (role.getRoleStatus().equalsIgnoreCase("Inactive"))
-//                return resourceBundle.getString("deactivated");
-//            else if (!password.equals(role.getPassword())) {
-//                incrementFailedAttemptsToAdminOrBanker(userName);
-//                return resourceBundle.getString("invalidPassword");
-//            } else
-//                setDefaultAttemptsToAdminOrBanker(userName);
-//                return resourceBundle.getString("loginSuccess");
-//        }
-//    }
+    @Override
+    //method that authenticates, weather the admin or Bank official credential's are valid
+    public String authenticateAdminOrBanker(String userName, String password) {
+        Role role = getRoleByUserName(userName);
+        if (role == null)
+            return resourceBundle.getString("notFound");
+        else {
+            if (role.getRoleStatus().equalsIgnoreCase("Inactive"))
+                return resourceBundle.getString("deactivated");
+            else if (!password.equals(role.getPassword())) {
+                incrementFailedAttemptsToAdminOrBanker(userName);
+                return resourceBundle.getString("invalidPassword");
+            } else
+                setDefaultAttemptsToAdminOrBanker(userName);
+                return resourceBundle.getString("loginSuccess");
+        }
+    }
 
-//    @Override
-//    //method that authenticates, weather the admin or Bank official credential's are valid
-//    public String authenticateCustomer(String userName, String password) {
-//         Customer customer = getCustomerByUserName(userName);
-//        if (customer == null)
-//            return resourceBundle.getString("notFound");
-//        else {
-//            if (customer.getCustomerStatus().equalsIgnoreCase("Inactive"))
-//
-//                return resourceBundle.getString("deactivated");
-//            else if (!password.equals(customer.getPassword())) {
-//                incrementFailedAttemptsToCustomer(userName);
-//                return resourceBundle.getString("invalidPassword");
-//            } else
-//                setDefaultAttemptsToCustomer(userName);
-//            return resourceBundle.getString("loginSuccess");
-//        }
-//    }
+    @Override
+    //method that authenticates, weather the admin or Bank official credential's are valid
+    public String authenticateCustomer(String userName, String password) {
+         Customer customer = getCustomerByUserName(userName);
+        if (customer == null)
+            return resourceBundle.getString("notFound");
+        else {
+            if (customer.getCustomerStatus().equalsIgnoreCase("Inactive"))
+
+                return resourceBundle.getString("deactivated");
+            else if (!password.equals(customer.getPassword())) {
+                incrementFailedAttemptsToCustomer(userName);
+                return resourceBundle.getString("invalidPassword");
+            } else
+                setDefaultAttemptsToCustomer(userName);
+            return resourceBundle.getString("loginSuccess");
+        }
+    }
 
     @Override
     //provides the list of LoanScheme Objects
@@ -151,14 +149,14 @@ public class BankService implements BankOperations, UserDetailsService {
         logger.info("reset the failed attempts to Customer:"+userName);
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-         Customer customer = getCustomerByUserName(username);
-         if(customer==null){
-             throw new UsernameNotFoundException("Invalid user!!");
-         }
-        return customer ;
-    }
+//    @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//         Customer customer = getCustomerByUserName(username);
+//         if(customer==null){
+//             throw new UsernameNotFoundException("Invalid user!!");
+//         }
+//        return customer ;
+//    }
     public int getAttempts(int id) {
         int attempts=jdbcTemplate.queryForObject("select failed_attempts from customer where customer_id=?",Integer.class,id);
         return attempts;
