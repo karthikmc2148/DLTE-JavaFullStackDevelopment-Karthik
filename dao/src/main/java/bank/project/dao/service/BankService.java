@@ -85,16 +85,22 @@ public class BankService implements BankOperations {
     //method that authenticates, weather the admin or Bank official credential's are valid
     public String authenticateAdminOrBanker(String userName, String password) {
         Role role = getRoleByUserName(userName);
-        if (role == null)
+        if (role == null) {
+            logger.info("user Not Found!!");
             return resourceBundle.getString("notFound");
+        }
         else {
-            if (role.getRoleStatus().equalsIgnoreCase("Inactive"))
+            if (role.getRoleStatus().equalsIgnoreCase("Inactive")) {
+                logger.info(userName + ": is deactivated!!");
                 return resourceBundle.getString("deactivated");
+            }
             else if (!password.equals(role.getPassword())) {
                 incrementFailedAttemptsToAdminOrBanker(userName);
+                logger.info("Invalid Password:"+userName);
                 return resourceBundle.getString("invalidPassword");
             } else
                 setDefaultAttemptsToAdminOrBanker(userName);
+                 logger.info("Successfully Logged in!! :"+userName);
                 return resourceBundle.getString("loginSuccess");
         }
     }
@@ -103,17 +109,20 @@ public class BankService implements BankOperations {
     //method that authenticates, weather the admin or Bank official credential's are valid
     public String authenticateCustomer(String userName, String password) {
          Customer customer = getCustomerByUserName(userName);
-        if (customer == null)
+        if (customer == null) {
+            logger.info("user Not Found!!");
             return resourceBundle.getString("notFound");
-        else {
-            if (customer.getCustomerStatus().equalsIgnoreCase("Inactive"))
-
+        }else {
+            if (customer.getCustomerStatus().equalsIgnoreCase("Inactive")) {
+                logger.info(userName + ": is deactivated!!");
                 return resourceBundle.getString("deactivated");
-            else if (!password.equals(customer.getPassword())) {
+            } else if (!password.equals(customer.getPassword())) {
                 incrementFailedAttemptsToCustomer(userName);
+                logger.info("Invalid Password:"+userName);
                 return resourceBundle.getString("invalidPassword");
             } else
                 setDefaultAttemptsToCustomer(userName);
+            logger.info("Successfully Logged in!! :"+userName);
             return resourceBundle.getString("loginSuccess");
         }
     }
@@ -184,6 +193,7 @@ public class BankService implements BankOperations {
         @Override
         public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
             Customer customer = new Customer();
+            logger.info("A new Customer object created");
             customer.setCustomerId(rs.getInt("customer_id"));
             customer.setCustomerName(rs.getString("customer_name"));
             customer.setCustomerAddress(rs.getString("customer_address"));
@@ -192,6 +202,7 @@ public class BankService implements BankOperations {
             customer.setCustomerContact(rs.getLong("customer_contact"));
             customer.setUserName(rs.getString("username"));
             customer.setPassword(rs.getString("password"));
+            logger.info(" customer object is Ready to view");
             return customer;
         }
     }
@@ -200,6 +211,7 @@ public class BankService implements BankOperations {
         @Override
         public Role mapRow(ResultSet rs, int rowNum) throws SQLException {
             Role role = new Role();
+            logger.info("A new Role object created");
             role.setRoleId(rs.getInt("role_id"));
             role.setRoleName(rs.getString("role_name"));
             role.setRoleDescription(rs.getString("role_desc"));
@@ -208,6 +220,7 @@ public class BankService implements BankOperations {
             role.setUsername(rs.getString("username"));
             role.setPassword(rs.getString("password"));
             role.setFailedAttempts(rs.getInt("failed_attempts"));
+            logger.info(" role object is Ready to view");
             return role;
         }
     }
@@ -217,11 +230,13 @@ public class BankService implements BankOperations {
         @Override
         public LoanScheme mapRow(ResultSet rs, int rowNum) throws SQLException {
             LoanScheme loanScheme = new LoanScheme();
+            logger.info("A new Loan Scheme object created");
             loanScheme.setLoanSchemeId(rs.getInt("loan_scheme_id"));
             loanScheme.setLoanSchemeType(rs.getString("loan_scheme_type"));
             loanScheme.setLoanSchemeName(rs.getString("loan_scheme_name"));
             loanScheme.setLoanSchemeDescription(rs.getString("loan_scheme_desc"));
             loanScheme.setLoanSchemeRoi(rs.getFloat("loan_scheme_roi"));
+            logger.info(" Loan Scheme object is Ready to view");
             return loanScheme;
         }
     }

@@ -52,38 +52,47 @@ import java.util.ResourceBundle;
     //calls a method to authenticate the admin or bank official
     @PostMapping("/authenticateAdminOrBanker")
     public String callingAuthenticateAdminOrBanker(@RequestParam("userName") String userName, @RequestParam("password") String password) {
+        logger.info("authentication of customer");
         return bankService.authenticateAdminOrBanker(userName, password);
     }
 
     //calls a method to authenticate the customer
     @PostMapping("/authenticateCustomer")
     public String callingAuthenticateCustomer(@RequestParam("userName") String userName,@RequestParam("password") String password){
-        logger.info("Entered authentication");
+        logger.info("authentication of customer");
         return bankService.authenticateCustomer(userName,password);
     }
 
     //calls a method to provide the Role object based on userName
     @GetMapping("/getRole/{userName}")
     public Role callingGetRoleByUserName(@PathVariable("userName") String userName) {
+        logger.info("controller called the getRoleById ");
         return bankService.getRoleByUserName(userName);
     }
 
     //calls a method to update the failed attempts
     @GetMapping("/failedAttemptsToAdminOrBanker/{userName}")
     public void callingFailedAttempts(@PathVariable("userName") String userName) {
+        logger.info("controller called the failedAttempts ");
         bankService.incrementFailedAttemptsToAdminOrBanker(userName);
     }
 
     //calls a method to set the default attempts
     @PutMapping("/setDefaultAttemptsToAdminOrBanker/{userName}")
     public void callingSetDefaultAttempts(@PathVariable("userName") String userName){
+        logger.info("controller called the setDefaultsAttempts of admin or banker ");
+        bankService.setDefaultAttemptsToAdminOrBanker(userName);
+    }
+    @PutMapping("/setDefaultAttemptsToCustomer/{userName}")
+    public void callingSetDefaultAttemptsToCustomer(@PathVariable("userName") String userName){
+        logger.info("controller called the setDefaultsAttempts of Customer ");
         bankService.setDefaultAttemptsToAdminOrBanker(userName);
     }
 
     //calls a method to provide the List of LoanScheme Objects
     @GetMapping("/allLoanScheme")
     public List<LoanScheme> callingGetLoanScheme(){
-
+        logger.info("controller called the getAllLoanScheme ");
         return bankService.getAllLoanScheme();
     }
 }
