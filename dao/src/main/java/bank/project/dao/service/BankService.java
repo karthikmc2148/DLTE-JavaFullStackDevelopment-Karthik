@@ -157,20 +157,6 @@ public class BankService implements BankOperations {
         jdbcTemplate.update("update role set failed_attempts=0 where username=?", userName);
         logger.info("reset the failed attempts to Customer:"+userName);
     }
-
-//    @Override
-//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//         Customer customer = getCustomerByUserName(username);
-//         if(customer==null){
-//             throw new UsernameNotFoundException("Invalid user!!");
-//         }
-//        return customer ;
-//    }
-    public int getAttempts(int id) {
-        int attempts=jdbcTemplate.queryForObject("select failed_attempts from customer where customer_id=?",Integer.class,id);
-        return attempts;
-    }
-
     // class that provides the all the records in Loan table
     class LoanMapper implements RowMapper<Loan> {
 

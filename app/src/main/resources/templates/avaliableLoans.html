@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <script>
+
     var soapRequest = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:soap=\"http://soap.project.bank\">\n" +
         " <soapenv:Header/>\n" +
         " <soapenv:Body>\n" +
@@ -22,6 +23,7 @@
         " </soapenv:Body>\n" +
         "</soapenv:Envelope>"
     $(document).ready(()=>{
+        //ajax call to SOAP API to  display the all LoanScheme  details
         $.ajax({
             url: "http://localhost:8082/loanPoint",
             type: "POST",
@@ -50,7 +52,7 @@
 </script>
 <body>
 <div class="container">
-
+<!--title of the page -->
     <div class="row justify-content-center text-dark bg-success rounded-4 mt-3 col-lg-12 col-md-8 col-sm-12">
         <div class="col-10">
             <div style="margin-left: 200px;">
@@ -60,16 +62,18 @@
 
         </div>
         <div class="col-2">
+<!--            Logout button-->
             <a th:href="@{~/mvn/loginCustomer}"><button class="btn btn-outline-danger rounded-4 me-2 mt-3"><i
                     class="bi bi-box-arrow-left"></i>Logout</button></a>
         </div>
 
     </div>
-
+<!--table tha displays the Loan Scheme Details -->
     <div class="table-responsive mt-4 rounded-4">
         <table class="table text-dark table-striped p-2 shadow-lg text-nowrap" cellspacing="1px" cellpadding="1px">
             <thead>
             <tr class="bg-info">
+<!--                table head -->
                 <th>Loan Scheme ID</th>
                 <th>Scheme Type</th>
                 <th>Name</th>

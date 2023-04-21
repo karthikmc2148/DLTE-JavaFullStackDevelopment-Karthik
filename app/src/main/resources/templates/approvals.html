@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>approvals</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -13,11 +13,12 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script th:src="@{/files/secure.js}"></script>
 </head>
 
 <body>
     <div class="container">
-
+        <!--title of the page   -->
         <div class="row justify-content-center text-dark bg-success rounded-4 mt-3 col-lg-12 col-md-8 col-sm-12">
             <div class="col-10">
                 <div style="margin-left: 200px;">
@@ -27,11 +28,12 @@
 
             </div>
             <div class="col-2">
+<!--                Logout Button-->
                 <a href="login.html"><button class="btn btn-outline-danger rounded-4 me-2 mt-3"><i
                             class="bi bi-box-arrow-left"></i>Logout</button></a>
             </div>
         </div>
-<!--table that displays the -->
+<!--table that displays the List of approvals -->
         <div class="table-responsive mt-4 rounded-4">
             <table class="table text-dark table-striped p-2 shadow-lg text-nowrap" cellspacing="1px" cellpadding="1px">
                 <thead>
@@ -46,30 +48,30 @@
                 <tbody>
                     <tr>
                         <td>101</td>
-                        <td>FDSGH324DS</td>
-                        <td>34576543245</td>
-                        <td>Approved</td>
+                        <td>SRET456DFY</td>
+                        <td>76856435245</td>
+                        <td>pending</td>
                         <td>292</td>
                     </tr>
                     <tr>
-                        <td>101</td>
-                        <td>FDSGH324DS</td>
-                        <td>34576543245</td>
+                        <td>102</td>
+                        <td>RTDSRT37685</td>
+                        <td>45743653473</td>
                         <td>Approved</td>
-                        <td>292</td>
+                        <td>294</td>
                     </tr>
                     <tr>
-                        <td>101</td>
-                        <td>FDSGH324DS</td>
-                        <td>34576543245</td>
+                        <td>103</td>
+                        <td>AETJE456744</td>
+                        <td>45743573553</td>
                         <td>Approved</td>
-                        <td>292</td>
+                        <td>253</td>
                     </tr>
                     <tr>
-                        <td>101</td>
-                        <td>FDSGH324DS</td>
-                        <td>34576543245</td>
-                        <td>Approved</td>
+                        <td>104</td>
+                        <td>SEYTK4T43E</td>
+                        <td>435764364624</td>
+                        <td>pending</td>
                         <td>292</td>
                     </tr>
                 </tbody>

@@ -37,9 +37,9 @@ public class MvnController {
         return "customer-Search";
     }
 
-    @GetMapping("/loanSearch")
-    public String loanSearch(){
-        return "loan-search";
+    @GetMapping("/loanDetails")
+    public String loanDetails(){
+        return "loanDetails";
     }
 
     @GetMapping("/createLoan")

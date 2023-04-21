@@ -15,8 +15,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
         let loanSchemes;
-        let count=0;
         $(document).ready(function(){
+            //ajax call to Rest API to  display the all LoanScheme details
             $.get("http://localhost:8082/bank/allLoanScheme", function(data) {
                 loanSchemes = data;
                 // $(".rows").remove()
@@ -24,33 +24,58 @@
                     $("tbody").append("<tr class='rows'><td>" + item.loanSchemeId+ "</td><td>" + item.loanSchemeType+ "</td><td>" + item.loanSchemeName + "</td><td>" + item.loanSchemeDescription + "</td><td>" + item.loanSchemeRoi + "</td></tr>");
                 })
             })
-            $("#loanSchemeId").change(()=>{
-                    const id = $("#loanSchemeId").val();
+            //search the Loan Scheme by Scheme Id
+            $("#idSearch").click(()=>{
+                let schemeId = $("#id").val();
+                if(schemeId=="") {
+                   // alert("id Shouldn't Empty!!");
+                    $("#response").html("loan scheme id Shouldn't Empty!!");
+                }
+                else{
+                    $("tbody").empty();
                     loanSchemes.map((val)=> {
-                        if (val.loanSchemeId == id)
-                            $("tbody").html("<tr><td>" + val.loanSchemeId + "</td><td>" + val.loanSchemeType + "</td><td>" + val.loanSchemeName+ "</td><td>" + val.loanSchemeDescription + "</td><td>" + val.loanSchemeRoi + "</td></tr>");
-                        else
-                            count +=1;
+                        if (val.loanSchemeId == schemeId) {
+                            $("tbody").html("<tr class='rows'><td>" + val.loanSchemeId+ "</td><td>" + val.loanSchemeType+ "</td><td>" + val.loanSchemeName + "</td><td>" + val.loanSchemeDescription + "</td><td>" + val.loanSchemeRoi + "</td></tr>");
+                        }
                     } )
-                    if(count>0)
-                        count=0;
-                    alert("Invalid Scheme Id!!")
-
+                    if ($("#customerTable").is(':empty')){
+                        //alert("Invalid Loan Scheme Id");
+                        $("#response").html("Invalid Loan Scheme Id!!");
+                        $.each(loanSchemes,function(index,item) {
+                            $("tbody").append("<tr class='rows'><td>" + item.loanSchemeId+ "</td><td>" + item.loanSchemeType+ "</td><td>" + item.loanSchemeName + "</td><td>" + item.loanSchemeDescription + "</td><td>" + item.loanSchemeRoi + "</td></tr>");
+                           // $(".rows").remove()
+                        })
+                    }
+                }
             })
 
+            //search the loanScheme by Scheme type
+            $("#typeSearch").click(()=>{
+                const loanType = $("#type").val().toLowerCase();
+                $("tbody").empty();
+                if( loanType==""){
+                    //alert("Loan Type shouldn't be empty!!");
+                    $("#response").html("loan Type shouldn't be empty!!")
+                    $.each(loanSchemes,function(index,item) {
+                        $("tbody").append("<tr class='rows'><td>" + item.loanSchemeId+ "</td><td>" + item.loanSchemeType+ "</td><td>" + item.loanSchemeName + "</td><td>" + item.loanSchemeDescription + "</td><td>" + item.loanSchemeRoi + "</td></tr>");
+                    })
+                }
+                else {
+                    loanSchemes.map((val) => {
+                        if (val.loanSchemeType.includes(loanType)) {
+                            $("tbody").append("<tr class='rows'><td>" + val.loanSchemeId+ "</td><td>" + val.loanSchemeType+ "</td><td>" + val.loanSchemeName + "</td><td>" + val.loanSchemeDescription + "</td><td>" + val.loanSchemeRoi + "</td></tr>");
+                        }
+                    })
+                    if ($("tbody").is(':empty')) {
+                       // alert("Loan Scheme Not found!!");
+                        $("#response").html("loan Scheme Not found!!");
+                        $.each(loanSchemes,function(index,item) {
+                            $("tbody").append("<tr class='rows'><td>" + item.loanSchemeId+ "</td><td>" + item.loanSchemeType+ "</td><td>" + item.loanSchemeName + "</td><td>" + item.loanSchemeDescription + "</td><td>" + item.loanSchemeRoi + "</td></tr>");
+                        })
+                    }
+                }
 
-            $("#type").change(()=>{
-                const schemeType = $("#type").val();
-                loanSchemes.map((val)=>{
-                    if(val.loanSchemeType.includes(schemeType))
-                        $("tbody").html("<tr><td>" + val.loanSchemeId + "</td><td>" + val.loanSchemeType+ "</td><td>" + val.loanSchemeName + "</td><td>" +val.loanSchemeDescription + "</td><td>" + val.loanSchemeRoi + "</td></tr>");
-                    else
-                        count +=1;
-                })
             })
-            if(count>0)
-                count=0;
-                alert("Invalid Scheme Type!!");
         });
     </script>
 </head>
@@ -60,6 +85,7 @@
 
     <div class="row justify-content-center text-dark bg-success rounded-4 mt-3 col-lg-12 col-md-8 col-sm-12">
         <div class="col-10">
+            <!--title of the page       -->
             <div style="margin-left: 200px;">
                 <h1 class="text-center"> <img id="logo" th:src="@{/files/download.png}" class="p-2 rounded-4" width="70px"
                                               height="70px" />Available Loans!!</h1>
@@ -67,6 +93,7 @@
 
         </div>
         <div class="col-2">
+            <!-- Logout button-->
             <a th:href="@{~/mvn/loginCustomer}"><button class="btn btn-outline-danger rounded-4 me-2 mt-3"><i
                     class="bi bi-box-arrow-left"></i>Logout</button></a>
         </div>
@@ -74,19 +101,42 @@
     </div>
     <div class="row justify-content-around">
         <div class="col-lg-5 col-md-8 col-sm-12 card bg-primary rounded-4 p-2 mt-2">
-            <p>Origin Bank operates as a full service bank!!<br> The Company offers banking products and services
-                such as savings accounts,<br></p>
+            <p>Origin Bank operates as a full service bank!!<br> The Company offers banking products and services such as savings accounts,<br></p>
         </div>
+        <!--  search customer-->
         <div class="col-lg-6 col-md-8 col-sm-12 align-self-center p-2 card bg-primary rounded-4 mt-2">
-            <div class="row justify-content-around">
-                <h2 class="text-dark text-center"><i class="bi bi-search"></i>Search</h2>
-                <div class="col-lg-6 col-sm-12">
-                    <input type="text" id="loanSchemeId" placeholder="Loan Scheme ID" class="form-control" /></div>
-                <div class="col-lg-6 col-sm-12">
-                    <input type="text"  id="type" placeholder="Loan Type " class="form-control" /></div>
+            <div class=" row justify-content-center">
+                <div class="row">
+                    <p class="col-lg-5 col-md-8 col-sm-12 text-danger mt-3 mb-2" id="response"></p>
+                    <h2 class=" col-lg-5 col-md-8 col-sm-12 text-dark text-center"><i class="bi bi-search"></i>Search</h2>
+                </div>
+                <div class="col-lg-5 col-sm-12 p-1 mt-1 mb-2">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-6 align-items-center">
+                            <!--  search customer by ID-->
+                            <input class=" form-control " type="text" id="id" name="cusId"  placeholder=" ID " />
+                        </div>
+                        <div class="col-lg-6 align-items-center">
+                            <button class="rounded-2 col-lg-4 " id="idSearch"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!--  search customer by customer Name-->
+                <div class="col-lg-5 col-sm-12 p-1 mt-1 mb-2">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7" align-items-center>
+                            <input type="text" id="type" name="cusName" placeholder=" Loan type" class="form-control" />
+                        </div>
+                        <div class="col-lg-5 align-items-center">
+                            <button class="rounded-2"  id="typeSearch"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+    <!--        table that displays all the LoanScheme Details-->
     <div class="table-responsive mt-4 rounded-4">
         <table class="table text-dark table-striped p-2 shadow-lg text-nowrap" cellspacing="1px" cellpadding="1px">
             <thead>
@@ -99,7 +149,7 @@
 
             </tr>
             </thead>
-            <tbody>
+            <tbody id="customerTable">
 
             </tbody>
         </table>
