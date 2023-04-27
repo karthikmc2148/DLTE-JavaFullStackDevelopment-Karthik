@@ -56,7 +56,7 @@ import java.util.ResourceBundle;
         return bankService.authenticateAdminOrBanker(userName, password);
     }
 
-    //calls a method to authenticate the customer
+    //calls a method to authenticate the Customer
     @PostMapping("/authenticateCustomer")
     public String callingAuthenticateCustomer(@RequestParam("userName") String userName,@RequestParam("password") String password){
         logger.info("authentication of customer");
