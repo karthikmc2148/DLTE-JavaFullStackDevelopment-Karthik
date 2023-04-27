@@ -61,7 +61,7 @@
         <div class="row justify-content-center text-dark bg-success rounded-4 mt-3 col-lg-12 col-md-8 col-sm-12">
             <div class="col-10">
                 <div style="margin-left: 200px;">
-                    <h1 class="text-center"> <img id="logo" th:src="@{/files/download.png}" class="p-2 rounded-4" width="70px"
+                    <h1 class="text-center mt-3"> <img id="logo" th:src="@{/files/download.png}" class="p-2 rounded-4" width="70px"
                             height="70px" />Loan Details!!</h1>
                 </div>
 
@@ -89,6 +89,11 @@
 
                 </tbody>
             </table>
+        </div>
+        <div class="mt-4">
+            <a th:href="@{~/mvn/dashboard}" ><button class=" btn btn-outline-danger" type="button">
+                <i class="bi bi-backspace"></i>back
+            </button></a>
         </div>
     </div>
 </body>

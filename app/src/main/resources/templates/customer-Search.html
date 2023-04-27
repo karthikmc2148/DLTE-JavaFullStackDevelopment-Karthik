@@ -22,57 +22,76 @@
             })
         })
         //search the customer by customer Id
-        $("#idSearch").click(()=>{
+       //  $("#idSearch").click(()=>{
+       //      const customerId = $("#id").val();
+       //      if(customerId=="") {
+       //          //alert("Customer Id Shouldn't be Empty");
+       //          $("#response").html("Customer Id Shouldn't be Empty!!");
+       //          $("#customerTable").empty();
+       //          $.each(customers,function(index,item) {
+       //              $("tbody").append("<tr><td>" + item.customerId+ "</td><td class='cusName'>" + item.customerName+ "</td><td>" + item.customerAddress + "</td><td>" + item.customerStatus + "</td><td>" + item.customerContact + "</td><td>" + item.userName +  "</td></tr>");
+       //          })
+       //      }
+       //      else{
+       //          $("tbody").empty();
+       //          customers.map((val)=> {
+       //              if (val.customerId == customerId) {
+       //                  $("tbody").html("<tr><td>" + val.customerId + "</td><td>" + val.customerName + "</td><td>" + val.customerAddress + "</td><td>" + val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td></tr>");
+       //              }
+       //          } )
+       //          if ($("#customerTable").is(':empty')){
+       //              //alert("Invalid Customer Id");
+       //              $("#response").html("Invalid Customer Id!!");
+       //              $.each(customers,function(index,item) {
+       //                  $("tbody").append("<tr><td>" + item.customerId+ "</td><td class='cusName'>" + item.customerName+ "</td><td>" + item.customerAddress + "</td><td>" + item.customerStatus + "</td><td>" + item.customerContact + "</td><td>" + item.userName +  "</td></tr>");
+       //              })
+       //          }
+       //      }
+       //  })
+       //
+       //  //search the customer by customer name
+       // $("#nameSearch").click(()=>{
+       //     const customerName = $("#name").val().toLowerCase();
+       //     $("tbody").empty();
+       //     if(customerName==""){
+       //        // alert("Please enter the name");
+       //         $("#response").html("customer name shouldn't be empty!!");
+       //         $.each(customers,function(index,item) {
+       //             $("tbody").append("<tr><td>" + item.customerId+ "</td><td class='cusName'>" + item.customerName+ "</td><td>" + item.customerAddress + "</td><td>" + item.customerStatus + "</td><td>" + item.customerContact + "</td><td>" + item.userName +  "</td></tr>");
+       //         })
+       //     }
+       //     else {
+       //         customers.map((val) => {
+       //             if (val.customerName.includes(customerName)) {
+       //                 $("tbody").append("<tr><td>" + val.customerId + "</td><td>" + val.customerName + "</td><td>" + val.customerAddress + "</td><td>" + val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td></tr>");
+       //             }
+       //         })
+       //         if ($("tbody").is(':empty')) {
+       //            // alert("Customer name not found!!");
+       //             $("#response").html("customer not found!!")
+       //         }
+       //     }
+       //
+       // })
+        $("#nameSearch").click(()=> {
+            const customerName = $("#name").val().toLowerCase();
             const customerId = $("#id").val();
-            if(customerId=="") {
-                //alert("Customer Id Shouldn't be Empty");
-                $("#response").html("Customer Id Shouldn't be Empty!!");
-                $("#customerTable").empty();
-                $.each(customers,function(index,item) {
-                    $("tbody").append("<tr><td>" + item.customerId+ "</td><td class='cusName'>" + item.customerName+ "</td><td>" + item.customerAddress + "</td><td>" + item.customerStatus + "</td><td>" + item.customerContact + "</td><td>" + item.userName +  "</td></tr>");
-                })
-            }
-            else{
-                $("tbody").empty();
-                customers.map((val)=> {
-                    if (val.customerId == customerId) {
-                        $("tbody").html("<tr><td>" + val.customerId + "</td><td>" + val.customerName + "</td><td>" + val.customerAddress + "</td><td>" + val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td></tr>");
+            if((customerName=="") || (customerId=="") )
+                $("#response").html("fields should not be empty!!");
+            else {
+                        $("tbody").empty();
+                        customers.map((val) => {
+                            if (val.customerName.includes(customerName) && val.customerId==customerId) {
+                                $("tbody").html("<tr><td>" + val.customerId + "</td><td>" + val.customerName + "</td><td>" + val.customerAddress + "</td><td>" + val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td></tr>");
+                            }
+                        })
+                        if ($("tbody").is(':empty')) {
+                           // alert("Customer name not found!!");
+                            $("#response").html("customer not found!!")
+                        }
                     }
-                } )
-                if ($("#customerTable").is(':empty')){
-                    //alert("Invalid Customer Id");
-                    $("#response").html("Invalid Customer Id!!");
-                    $.each(customers,function(index,item) {
-                        $("tbody").append("<tr><td>" + item.customerId+ "</td><td class='cusName'>" + item.customerName+ "</td><td>" + item.customerAddress + "</td><td>" + item.customerStatus + "</td><td>" + item.customerContact + "</td><td>" + item.userName +  "</td></tr>");
-                    })
-                }
-            }
         })
 
-        //search the customer by customer name
-       $("#nameSearch").click(()=>{
-           const customerName = $("#name").val().toLowerCase();
-           $("tbody").empty();
-           if(customerName==""){
-              // alert("Please enter the name");
-               $("#response").html("customer name shouldn't be empty!!");
-               $.each(customers,function(index,item) {
-                   $("tbody").append("<tr><td>" + item.customerId+ "</td><td class='cusName'>" + item.customerName+ "</td><td>" + item.customerAddress + "</td><td>" + item.customerStatus + "</td><td>" + item.customerContact + "</td><td>" + item.userName +  "</td></tr>");
-               })
-           }
-           else {
-               customers.map((val) => {
-                   if (val.customerName.includes(customerName)) {
-                       $("tbody").append("<tr><td>" + val.customerId + "</td><td>" + val.customerName + "</td><td>" + val.customerAddress + "</td><td>" + val.customerStatus + "</td><td>" + val.customerContact + "</td><td>" + val.userName + "</td></tr>");
-                   }
-               })
-               if ($("tbody").is(':empty')) {
-                  // alert("Customer name not found!!");
-                   $("#response").html("customer not found!!")
-               }
-           }
-
-       })
     });
 </script>
 </head>
@@ -83,7 +102,7 @@
         <div class="row justify-content-center text-dark bg-success rounded-4 mt-3 col-lg-12 col-md-8 col-sm-12"> 
             <div class="col-10">
                 <div style="margin-left: 200px;">
-                    <h1 class="text-center"> <img id="logo" src="/files/download.png" class="p-2 rounded-4" width="70px"
+                    <h1 class="text-center mt-3"> <img id="logo" src="/files/download.png" class="p-2 rounded-4" width="70px"
                             height="70px" />Customer Details!!</h1>
                 </div>
 
@@ -108,13 +127,13 @@
                 </div>
                 <div class="col-lg-5 col-sm-12 p-1 mt-1 mb-2">
                     <div class="row d-flex align-items-center">
-                        <div class="col-lg-6 align-items-center">
+                        <div class="col-lg-8 align-items-center">
                             <!--  search customer by ID-->
-                        <input class=" form-control " type="text" id="id" name="cusId"  placeholder=" ID " />
+                        <input class=" form-control " type="text" id="id" name="cusId"  placeholder="customer ID " />
                         </div>
-                        <div class="col-lg-6 align-items-center">
-                     <button class="rounded-2 col-lg-4 " id="idSearch"><i class="bi bi-search"></i></button>
-                        </div>
+<!--                        <div class="col-lg-6 align-items-center">-->
+<!--                     <button class="rounded-2 col-lg-4 " id="idSearch"><i class="bi bi-search"></i></button>-->
+<!--                        </div>-->
                     </div>
                 </div>
                 <!--  search customer by customer Name-->
@@ -150,7 +169,12 @@
 
                 </tbody>    
             </table>
-        </div>   
+        </div>
+        <div class="mt-4">
+            <a th:href="@{~/mvn/dashboard}" ><button class=" btn btn-outline-danger" type="button">
+                <i class="bi bi-backspace"></i>back
+            </button></a>
+        </div>
     </div>
 </body>
 </html>

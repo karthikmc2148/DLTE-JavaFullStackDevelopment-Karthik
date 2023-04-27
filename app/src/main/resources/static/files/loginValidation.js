@@ -8,7 +8,7 @@ $(document).ready(()=>{
             $(this).addClass('invalid-input').removeClass('valid-input');
 
         } else if (!validUserName.test(username)) {
-            $('.user').addClass('invalid-msg').text('username must atleast 4 characters!!');
+            $('.user').addClass('invalid-msg').text('username must contain atleast  4 characters!!');
             $(this).addClass('invalid-input').removeClass('valid-input');
 
         } else {
@@ -21,7 +21,7 @@ $(document).ready(()=>{
         var password = $(this).val();
         var validPassword = /^[a-z]{4,}[0-9]{3}$/;
         if (password.length === 0) {
-            $('.password').addClass('invalid-msg').text("username is required!!");
+            $('.password').addClass('invalid-msg').text("password is required!!");
             $(this).addClass('invalid-input').removeClass('valid-input');
 
         } else if (!validPassword.test(password)) {

@@ -20,7 +20,7 @@
         <div class="col-10">
             <div style="margin-left: 200px;">
 <!--                title of the page -->
-                <h1 class="text-center"> <img id="logo" src="/files/download.png" class="p-2 rounded-4" width="70px"
+                <h1 class="text-center mt-3"> <img id="logo" src="/files/download.png" class="p-2 rounded-4" width="70px"
                                               height="70px" />New Loan-Type Creation!!</h1>
             </div>
 
@@ -34,7 +34,7 @@
     </div>
 <!--    A form that Enables us to provide the values in Specific  fields -->
     <div class="row justify-content-center ">
-        <form class="bg-info text-dark rounded-4 mt-4 p-3 col-lg-5 col-md-8 col-sm-12">
+        <form class="bg-info-subtle text-dark rounded-4 mt-4 p-3 col-lg-5 col-md-8 col-sm-12">
             <div class="form-group mt-2 p-2">
                 <label>Loan Scheme Type</label>
                 <input type="text" name="loanSchemeType" class="form-control"/>
@@ -51,15 +51,15 @@
                 <label>Loan Rate of intrest </label>
                 <input type="text" name="loanRateOfIntrest" class="form-control"/>
             </div>
-            <div class="mt-2 p-3 row  justify-content-around">
+            <div class="mt-2 p-3 row justify-content-around">
 <!--                Submit button-->
                 <button class="col-3 btn btn-outline-success" type="submit">
-                    <i class="bi bi-box-arrow-in-right"></i>
-                </button>
+                    <i class="bi bi-box-arrow-in-right"></i>submit
+                 </button>
 <!--                Reset button-->
-                <button class="col-3 btn btn-outline-danger" type="reset">
-                    <i class="bi bi-x-circle-fill"></i>
-                </button>
+               <a th:href="@{~/mvn/dashboard}" class="col-3"><button class=" btn btn-outline-danger" type="button">
+                   <i class="bi bi-backspace"></i>back
+               </button></a>
             </div>
 
         </form>

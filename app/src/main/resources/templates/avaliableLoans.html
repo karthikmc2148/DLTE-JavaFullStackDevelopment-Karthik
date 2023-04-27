@@ -35,11 +35,11 @@
                 $(data).find('ns2\\:loanScheme').each(function() {
                     var id = $(this).find('ns2\\:loanSchemeId').text();
                     var type = $(this).find('ns2\\:loanSchemeType').text();
-                    var name = $(this).find('ns2\\:loanSchemeName').text();
+                    var name= $(this).find('ns2\\:loanSchemeName').text();
                     var description = $(this).find('ns2\\:loanSchemeDescription').text();
                     var rateOfInterest = $(this).find('ns2\\:loanSchemeRoi').text();
                     console.log('name: ' + name + ', type: ' + type + ', desc: ' + description + ', roi: '+ rateOfInterest);
-                    $("tbody").append("<tr><td>"+id+"</td><td>"+name+"</td><td>"+type+"</td><td>"+description+"</td><td>"+rateOfInterest+"</td></tr>");
+                    $("tbody").append("<tr><td>"+id+"</td><td>"+type+"</td><td>"+name+"</td><td>"+description+"</td><td>"+rateOfInterest+"</td></tr>");
                 });
             },
             error:()=>{
@@ -56,7 +56,7 @@
     <div class="row justify-content-center text-dark bg-success rounded-4 mt-3 col-lg-12 col-md-8 col-sm-12">
         <div class="col-10">
             <div style="margin-left: 200px;">
-                <h1 class="text-center"> <img id="logo" th:src="@{/files/download.png}" class="p-2 rounded-4" width="70px"
+                <h1 class="text-center mt-3"> <img id="logo" th:src="@{/files/download.png}" class="p-2 rounded-4" width="70px"
                                               height="70px" />Available Loans!!</h1>
             </div>
 
@@ -86,6 +86,11 @@
 
             </tbody>
         </table>
+    </div>
+    <div class="mt-4">
+        <a th:href="@{~/mvn/dashboardCustomer}" ><button class=" btn btn-outline-danger" type="button">
+            <i class="bi bi-backspace"></i>back
+        </button></a>
     </div>
 </div>
 </body>
