@@ -173,7 +173,7 @@ public class BankService implements BankOperations {
             return loan;
         }
     }
-    // class that provides the all the records in customer table
+    // class that provides the all the records in customer table .
     class CustomerMapper implements RowMapper<Customer>{
 
         @Override
